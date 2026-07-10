@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783663332797,
+    "updated":  1783695194739,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,10 +7,7 @@
                    "online":  true
                },
     "online":  [
-                   "soopa5106",
-                   "DirkDiggler",
-                   "Prof. Merlyn",
-                   "xBabaloox"
+
                ],
     "deaths":  [
                    {
@@ -47,6 +44,20 @@
                        "who":  "Babaloo",
                        "id":  "c5b9b04053",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Dimorphodon",
+                       "ts":  "2026-07-10T08:53:14.6994938-06:00",
+                       "who":  "Babaloo",
+                       "id":  "8195eb08c6",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Dimorphodon",
+                       "ts":  "2026-07-10T08:53:14.7024921-06:00",
+                       "who":  "Dodo",
+                       "id":  "3469a25d2b",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
@@ -73,6 +84,30 @@
                       "species":  "",
                       "ts":  "2026-07-10T00:02:12.7824315-06:00",
                       "tamer":  "Babaloo of Tribe Tiggles"
+                  },
+                  {
+                      "id":  "c86b098888",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-10T08:53:14.7074921-06:00",
+                      "tamer":  "Soop of Tribe Tiggles"
+                  },
+                  {
+                      "id":  "af70413f48",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-10T08:53:14.7094920-06:00",
+                      "tamer":  "Tribe"
+                  },
+                  {
+                      "id":  "c379f5e48c",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-10T08:53:14.7124937-06:00",
+                      "tamer":  "WesleyPipes of Tribe PowerBottomBoys"
                   }
               ],
     "events":  [
