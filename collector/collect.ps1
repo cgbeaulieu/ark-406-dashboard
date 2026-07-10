@@ -4,21 +4,13 @@
   Runs on the SERVER PC (Task Scheduler, every few minutes).
   Talks to the ARK server over RCON, extracts live data, and
   writes ..\data.json (which the static dashboard fetches).
-
-  Usage:
-    .\collect.ps1              # normal run: RCON -> data.json (+ push if enabled)
-    .\collect.ps1 -Offline     # no server needed: writes sample data.json to test the site
-    .\collect.ps1 -NoPush      # collect but don't git push
-
-  NOTE: the tribe-log parsing (deaths/tames) is best-effort against
-  ARK's known log format. It writes anything it can't parse to
-  collector\unparsed.log so we can fine-tune regexes after the first
-  live run. Online players / server status are rock-solid.
 ============================================================
 #>
 param(
   [switch]$Offline,
-  [switch]$NoPush
+  [switch]$NoPush,
+  [string]$TestLog,   # parse a saved GetGameLog text file and print results (for tuning)
+  [switch]$Rebuild    # re-parse accumulated state.seen[] with the current parser (fixes old data)
 )
 $ErrorActionPreference = "Stop"
 $Root      = Split-Path -Parent $PSScriptRoot          # repo root
@@ -29,7 +21,11 @@ $Unparsed  = Join-Path $PSScriptRoot "unparsed.log"
 # ---------------- config ----------------
 $cfgPath = Join-Path $PSScriptRoot "config.ps1"
 if (Test-Path $cfgPath) { . $cfgPath }
-elseif (-not $Offline)  { throw "Missing collector\config.ps1 - copy config.example.ps1 to config.ps1 and fill it in." }
+elseif (-not $Offline -and -not $TestLog) {
+  # No config yet - exit cleanly so a scheduled task never shows as "failed".
+  Write-Host "collector\config.ps1 not found yet - nothing to do. (Copy config.example.ps1 to config.ps1 to start collecting.)"
+  exit 0
+}
 if (-not $Config) { $Config = @{ ServerName="406 Server"; Map="Ragnarok"; Mode="PvE Co-op"; Push=$false } }
 
 # ---------------- state (accumulated history) ----------------
@@ -38,15 +34,14 @@ function Load-State {
   return [pscustomobject]@{ deaths=@(); tames=@(); events=@(); seen=@() }
 }
 function Save-State($s) { $s | ConvertTo-Json -Depth 8 | Set-Content $StateFile -Encoding utf8 }
-# ConvertFrom-Json gives fixed-size arrays; wrap so we can append.
 function AsList($x) { $l = New-Object System.Collections.ArrayList; if ($x) { foreach ($i in $x) { [void]$l.Add($i) } }; return ,$l }
 
-# ================= Source RCON (from scratch, no dependencies) =================
+# ================= Source RCON =================
 function Write-RconPacket($stream, [int]$id, [int]$type, [string]$body) {
   $bodyBytes = [Text.Encoding]::ASCII.GetBytes($body)
   $len = 4 + 4 + $bodyBytes.Length + 2
   $ms = New-Object IO.MemoryStream
-  $bw = New-Object IO.BinaryWriter($ms)        # BinaryWriter is little-endian on Windows
+  $bw = New-Object IO.BinaryWriter($ms)
   $bw.Write([int32]$len); $bw.Write([int32]$id); $bw.Write([int32]$type)
   $bw.Write($bodyBytes); $bw.Write([byte]0); $bw.Write([byte]0); $bw.Flush()
   $arr = $ms.ToArray(); $stream.Write($arr, 0, $arr.Length); $stream.Flush()
@@ -74,17 +69,15 @@ function Invoke-Rcon([string]$rhost, [int]$port, [string]$pass, [string]$command
   try {
     $client.Connect($rhost, $port)
     $stream = $client.GetStream(); $stream.ReadTimeout = 4000
-    Write-RconPacket $stream 1 3 $pass                 # SERVERDATA_AUTH
-    # Auth reply is a type-2 packet; id = -1 means bad password (may be preceded by a junk type-0).
+    Write-RconPacket $stream 1 3 $pass
     $ok = $false
     for ($i=0; $i -lt 3; $i++) {
       $p = Read-RconPacket $stream
       if ($p.type -eq 2) { if ($p.id -eq -1) { throw "RCON auth failed (bad password)" } $ok=$true; break }
     }
     if (-not $ok) { throw "RCON auth: no auth response" }
-    Write-RconPacket $stream 2 2 $command              # SERVERDATA_EXECCOMMAND
+    Write-RconPacket $stream 2 2 $command
     Start-Sleep -Milliseconds 150
-    # Read one or more response packets until the stream goes quiet.
     $sb = New-Object Text.StringBuilder
     while ($true) {
       try { $p = Read-RconPacket $stream } catch { break }
@@ -97,7 +90,6 @@ function Invoke-Rcon([string]$rhost, [int]$port, [string]$pass, [string]$command
 
 # ================= parsing =================
 function Parse-Players([string]$text) {
-  # "ListPlayers" -> lines like "0. SomeName, 0002abc..." or "No Players Connected"
   $names = @()
   foreach ($line in ($text -split "`n")) {
     $m = [regex]::Match($line.Trim(), '^\d+\.\s+(.+?),\s*[0-9a-fA-F]+\s*$')
@@ -105,50 +97,106 @@ function Parse-Players([string]$text) {
   }
   return ,$names
 }
+
 function Strip-Rich([string]$s) {
   $s = [regex]::Replace($s, '<RichColor[^>]*>', '')
   $s = $s -replace '</>', ''
   return $s.Trim()
 }
+
 # Returns @{ deaths=@(...); tames=@(...) } parsed from a GetGameLog dump.
 function Parse-GameLog([string]$text, $state) {
   $result = @{ deaths=@(); tames=@() }
   foreach ($raw in ($text -split "`n")) {
     $line = Strip-Rich $raw
     if (-not $line) { continue }
+    
+    # 1. Strip the server timestamp prefix aggressively
+    $line = [regex]::Replace($line, '^[\d\._\s\-]+:\s*', '').Trim()
+    
     $key = ($line -replace '\s+', ' ').Trim()
     if ($state.seen -contains $key) { continue }         # dedupe against history
     $matched = $false
 
-    # DEATH:  "Name was killed by <killer>!"   (skip quoted victims = tamed dinos)
-    $m = [regex]::Match($line, "([A-Za-z0-9_][\w '\-]*?) was killed by (.+?)[!.]")
-    if ($m.Success -and $m.Groups[1].Value -notmatch "'") {
-      $result.deaths += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); who=$m.Groups[1].Value.Trim();
-        cause="Slain in the wild"; killer=(Strip-Rich $m.Groups[2].Value).Trim(); ts=(Get-Date).ToString('o') }
+    # A tamed creature's death carries TWO paren groups "(Species) (Tribe)" before
+    # "was killed" (e.g. "Dodo - Lvl 93 (Dodo) (Tiggles) was killed..."). Skip those -
+    # the Wall of Shame is for people dying, not their dinos.
+    if ($line -match '\([^)]*\)\s+\([^)]*\)\s+was killed') { $matched = $true }
+
+    # DEATH by a killer:  "<Player> - Lvl N (Tribe) was killed by <killer> - Lvl M ()!"
+    if (-not $matched -and $line -match '^(.+?)\s+-\s+Lvl\s+\d+\s*\([^)]*\)\s+was killed by\s+(.+?)!') {
+      $who    = $Matches[1].Trim()
+      $killer = [regex]::Replace($Matches[2].Trim(), '\s*-\s+Lvl\s+\d+\s*\([^)]*\)\s*$', '').Trim()
+      if ($who -notmatch "'") {
+        $result.deaths += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); who=$who; cause="Slain in the wild"; killer=$killer; ts=(Get-Date).ToString('o') }
+      }
       $matched = $true
     }
-    if (-not $matched) {
-      $m = [regex]::Match($line, "([A-Za-z0-9_][\w '\-]*?) was killed[!.]")
-      if ($m.Success -and $m.Groups[1].Value -notmatch "'") {
-        $result.deaths += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); who=$m.Groups[1].Value.Trim();
-          cause="Died mysteriously"; killer=""; ts=(Get-Date).ToString('o') }
-        $matched = $true
+
+    # ENVIRONMENTAL DEATH (fall/drown/etc):  "<Player> - Lvl N (Tribe) was killed!"
+    if (-not $matched -and $line -match '^(.+?)\s+-\s+Lvl\s+\d+\s*\([^)]*\)\s+was killed!') {
+      $who = $Matches[1].Trim()
+      if ($who -notmatch "'") {
+        $result.deaths += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); who=$who; cause="Died mysteriously"; killer=""; ts=(Get-Date).ToString('o') }
       }
-    }
-    # TAME:  "Name Tamed a <Species> - Lvl NN (Species)!"
-    if (-not $matched) {
-      $m = [regex]::Match($line, "([A-Za-z0-9_][\w '\-]*?) [Tt]amed a[n]? (.+?)( - Lvl (\d+))?[ !\(]")
-      if ($m.Success) {
-        $result.tames += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); tamer=$m.Groups[1].Value.Trim();
-          species=(Strip-Rich $m.Groups[2].Value).Trim(); name=""; level=$m.Groups[4].Value; ts=(Get-Date).ToString('o') }
-        $matched = $true
-      }
+      $matched = $true
     }
 
-    if ($matched) { $state.seen += $key }
-    elseif ($line -match "killed|Tamed|tamed") { Add-Content $Unparsed ("[{0}] {1}" -f (Get-Date -Format s), $line) }
+    # TAME:  "<Player> of Tribe <T> Tamed a <Species> - Lvl N (Class)!"
+    if (-not $matched -and $line -match '[Tt]amed a[n]?\s+(.+?)!') {
+      $rawTame = $Matches[1].Trim()
+      $tamer   = ($line -replace '\s+[Tt]amed a[n]?\s.*$', '').Trim()
+      $tamer   = [regex]::Replace($tamer, '\s+of\s+Tribe\s+.*$', '').Trim()    # "Soop of Tribe Tiggles" -> "Soop"
+      $tamer   = [regex]::Replace($tamer, '\s*-\s+Lvl.*$', '').Trim()
+      $lvl     = [regex]::Match($rawTame, '-\s+Lvl\s+(\d+)')
+      $level   = if ($lvl.Success) { $lvl.Groups[1].Value } else { "" }
+      $species = [regex]::Replace($rawTame, '\s*-\s+Lvl\s+\d+.*$', '').Trim()   # drop "- Lvl N (Class)"
+      $species = [regex]::Replace($species, '\s*\([^)]*\)\s*$', '').Trim()      # drop trailing "(Class)"
+      # Skip tribe-level / baby-birth events (no individual tamer) and vehicles.
+      if ($tamer -and $tamer -notmatch '^(Tribe|Your Tribe)\b' -and $species -notmatch '^(Wooden\s+)?(Raft|Motorboat)$') {
+        $result.tames += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); tamer=$tamer; species=$species; name=""; level=$level; ts=(Get-Date).ToString('o') }
+      }
+      $matched = $true
+    }
+
+    if ($matched) { 
+      $state.seen += $key 
+    } elseif ($line -match "killed|Tamed|tamed") { 
+      # Clear old instances so it doesn't just stack duplicates in unparsed.log
+      Add-Content $Unparsed ("[{0}] {1}" -f (Get-Date -Format s), $line) 
+    }
   }
   return $result
+}
+
+# ================= test-parse mode (offline regex tuning) =================
+if ($TestLog) {
+  if (-not (Test-Path $TestLog)) { throw "TestLog file not found: $TestLog" }
+  $sample = Get-Content $TestLog -Raw
+  $st = [pscustomobject]@{ seen = @() }
+  $r = Parse-GameLog $sample $st
+  Write-Host "DEATHS ($($r.deaths.Count)):"
+  $r.deaths | ForEach-Object { Write-Host ("  {0,-14} <- {1}" -f $_.who, $_.killer) }
+  Write-Host "TAMES ($($r.tames.Count)):"
+  $r.tames | ForEach-Object { Write-Host ("  {0,-14} tamed {1} (Lvl {2})" -f $_.tamer, $_.species, $_.level) }
+  exit 0
+}
+
+# ================= rebuild mode (re-parse history with the current parser) =================
+if ($Rebuild) {
+  $old = Load-State
+  $lines = @($old.seen)
+  # Also re-try anything previously logged as unparseable (strip the "[timestamp] " prefix).
+  if (Test-Path $Unparsed) {
+    Get-Content $Unparsed | ForEach-Object { $lines += ($_ -replace '^\[[^\]]*\]\s*', '') }
+    Remove-Item $Unparsed   # Parse-GameLog re-logs any that STILL don't parse
+  }
+  $st = [pscustomobject]@{ seen = @() }
+  $r = Parse-GameLog (($lines) -join "`n") $st
+  Save-State ([pscustomobject]@{ deaths=@($r.deaths); tames=@($r.tames); events=@($old.events); seen=@($st.seen) })
+  Write-Host ("Rebuilt from {0} remembered lines -> {1} deaths, {2} tames." -f $lines.Count, $r.deaths.Count, $r.tames.Count)
+  Write-Host "Run the collector once more (or wait for the schedule) to refresh data.json."
+  exit 0
 }
 
 # ================= collect =================

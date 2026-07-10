@@ -81,12 +81,20 @@ schtasks /Create /TN "406 Dashboard Collector" /TR "powershell -NoProfile -Execu
 | `data.json` | Live data, overwritten by the collector each run. |
 | `collector/collect.ps1` | The collector (RCON → parse → data.json → push). |
 | `collector/config.example.ps1` | Template; copy to `config.ps1` (gitignored, holds your RCON password). |
+| `collector/install-collector-task.ps1` | One-click: registers the every-10-min scheduled task. |
 | `collector/state.json` | Accumulated history + dedupe (gitignored, auto-created). |
-| `collector/unparsed.log` | Tribe-log lines the parser didn't recognize — used to refine regexes. |
+| `collector/unparsed.log` | Any tribe-log lines the parser didn't recognize (gitignored). Should stay empty. |
 
-## Known caveat — needs one live run to finalize
-Online players and server status are rock-solid. The **death/tame parsing** reads ARK's tribe log,
-whose exact wording I couldn't test against a live server yet. On the first real run, check
-`collector/unparsed.log`: any death/tame lines that landed there mean a regex in `collect.ps1`
-(`Parse-GameLog`) needs a small tweak to match your server's exact phrasing. Send me a few sample
-lines and I'll finalize it.
+## Parsing (tuned against the live server)
+`Parse-GameLog` in `collect.ps1` is tuned to the real ASA tribe-log format, e.g.:
+- `Soop - Lvl 16 (Tiggles) was killed by a Dimorphodon - Lvl 50 ()!` → death: **Soop** ← *a Dimorphodon*
+- `Soop of Tribe Tiggles Tamed a Pteranodon - Lvl 84 (Pteranodon)!` → tame: **Soop** — Pteranodon (Lvl 84)
+
+It correctly ignores tamed-dino deaths (two paren groups = the dino, not a person), strips `of Tribe X`
+from tamers, and skips rafts / tribe-level baby births.
+
+**Maintenance helpers:**
+- `collect.ps1 -TestLog <file>` — parse a saved GetGameLog dump and print the deaths/tames it finds (no server needed). Great for tuning new formats.
+- `collect.ps1 -Rebuild` — re-parse the remembered history in `state.json` (and retry `unparsed.log`) with the current parser, fixing any older mis-parsed entries in place.
+
+If a new kind of line ever shows up in `unparsed.log`, paste it in and the regexes get a quick tweak.
