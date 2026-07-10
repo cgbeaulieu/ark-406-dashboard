@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783659316680,
+    "updated":  1783661279651,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,13 +8,43 @@
                },
     "online":  [
                    "soopa5106",
-                   "DirkDiggler"
+                   "DirkDiggler",
+                   "Prof. Merlyn",
+                   "xBabaloox"
                ],
     "deaths":  [
-
+                   {
+                       "killer":  "a Pachy",
+                       "ts":  "2026-07-09T23:27:59.6217514-06:00",
+                       "who":  "Soop",
+                       "id":  "6c99a760d7",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Dilophosaur",
+                       "ts":  "2026-07-09T23:27:59.6307514-06:00",
+                       "who":  "Soop",
+                       "id":  "75cb36d3f1",
+                       "cause":  "Slain in the wild"
+                   }
                ],
     "tames":  [
-
+                  {
+                      "id":  "97a3e17c69",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-09T23:27:59.6287533-06:00",
+                      "tamer":  "Soop of Tribe"
+                  },
+                  {
+                      "id":  "e71eaf1445",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-09T23:27:59.6307514-06:00",
+                      "tamer":  "Tribe PowerBottomBoys"
+                  }
               ],
     "events":  [
 
