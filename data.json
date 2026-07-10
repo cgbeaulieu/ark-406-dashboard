@@ -1,10 +1,10 @@
 ﻿{
-    "updated":  1783657949109,
+    "updated":  1783658061892,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
                    "mode":  "PvE Co-op",
-                   "online":  true
+                   "online":  false
                },
     "online":  [
 
