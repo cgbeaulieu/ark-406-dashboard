@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SAGA OF 406 // DINO WARFARE</title>
+<style>
+:root{
+  --void:#0a0118; --void2:#16032f; --panel:rgba(20,4,46,.72);
+  --ink:#eafcff; --dim:#9db4dd; --faint:#6f7fb0;
+  --cyan:#00f0ff; --magenta:#ff1e8e; --red:#ff2b4e; --green:#22ff9f;
+  --purple:#a24bff; --yellow:#ffd319; --orange:#ff5a2c;
+  --disp:"Impact","Haettenschweiler","Arial Narrow Bold","Arial Black",sans-serif;
+  --sans:"Arial",Helvetica,sans-serif;
+  --mono:"Consolas","SF Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box} body{margin:0}
+html,body{background:var(--void)}
+.saga{position:relative; min-height:100vh; overflow:hidden; color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.5;
+  background:
+    radial-gradient(120% 80% at 50% 120%, rgba(255,30,142,.18), transparent 55%),
+    radial-gradient(90% 70% at 50% -10%, rgba(0,240,255,.14), transparent 60%),
+    linear-gradient(180deg,#0a0118 0%, #16032f 60%, #24004a 100%);}
+
+/* neon perspective grid on the floor */
+.grid{position:fixed; left:-25%; right:-25%; bottom:-2px; height:46vh; z-index:0; pointer-events:none;
+  background-image:linear-gradient(rgba(0,240,255,.55) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,.35) 1px, transparent 1px);
+  background-size:44px 44px; transform:perspective(320px) rotateX(74deg); transform-origin:bottom center;
+  mask-image:linear-gradient(to top, #000 5%, transparent 92%); -webkit-mask-image:linear-gradient(to top, #000 5%, transparent 92%); opacity:.7;}
+@media (prefers-reduced-motion:no-preference){.grid{animation:scroll 1.4s linear infinite}
+  @keyframes scroll{from{background-position:0 0,0 0} to{background-position:0 44px,0 44px}}}
+/* scanlines + flicker */
+.scan{position:fixed; inset:0; z-index:60; pointer-events:none; mix-blend-mode:overlay; opacity:.5;
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.5) 2px 4px);}
+@media (prefers-reduced-motion:no-preference){.scan{animation:flick 6s steps(60) infinite}
+  @keyframes flick{0%,97%,100%{opacity:.5}98%{opacity:.28}99%{opacity:.6}}}
+.wrap{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:26px 20px 80px}
+
+/* ---------- banner ---------- */
+.banner{position:relative; display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding:34px 28px 30px; overflow:hidden;
+  background:linear-gradient(180deg, rgba(30,6,64,.6), rgba(10,1,24,.4)); border:1px solid var(--magenta);
+  box-shadow:0 0 22px rgba(255,30,142,.45), inset 0 0 30px rgba(255,30,142,.08);}
+.sun{position:absolute; right:6%; top:50%; transform:translateY(-50%); width:190px; height:190px; border-radius:50%; z-index:0; filter:blur(.3px);
+  background:linear-gradient(#ffe53d 0%, #ff8a1e 42%, #ff1e8e 100%);
+  -webkit-mask-image:linear-gradient(to bottom, #000 44%, transparent 44%), repeating-linear-gradient(to bottom, #000 0 8px, transparent 8px 14px);
+  mask-image:linear-gradient(to bottom, #000 44%, transparent 44%), repeating-linear-gradient(to bottom, #000 0 8px, transparent 8px 14px);
+  -webkit-mask-composite:source-over; box-shadow:0 0 60px rgba(255,90,44,.6); opacity:.9;}
+@media (max-width:640px){.sun{opacity:.35; right:-10%}}
+.crest{position:relative; z-index:1; width:88px; height:88px; flex:0 0 auto; display:grid; place-items:center; transform:rotate(45deg);
+  background:linear-gradient(135deg, rgba(0,240,255,.18), rgba(255,30,142,.18)); border:2px solid var(--cyan);
+  box-shadow:0 0 18px var(--cyan), inset 0 0 14px rgba(0,240,255,.4);}
+.crest b{transform:rotate(-45deg); font-family:var(--disp); font-style:italic; font-size:30px; color:#fff; letter-spacing:1px;
+  text-shadow:0 0 8px var(--cyan), 0 0 18px var(--cyan);}
+.titles{position:relative; z-index:1; flex:1 1 320px; min-width:260px}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:var(--cyan); margin:0 0 8px; text-shadow:0 0 8px rgba(0,240,255,.7)}
+.titles h1{font-family:var(--disp); font-style:italic; font-weight:400; text-transform:uppercase; margin:0; line-height:.9;
+  font-size:clamp(38px,7.5vw,74px); letter-spacing:.01em; color:#fff;
+  text-shadow:-2px 0 var(--magenta), 2px 0 var(--cyan), 0 0 18px rgba(255,30,142,.7), 0 0 40px rgba(0,240,255,.4);}
+@media (prefers-reduced-motion:no-preference){.titles h1{animation:glitch 5.5s infinite}
+  @keyframes glitch{0%,92%,100%{text-shadow:-2px 0 var(--magenta),2px 0 var(--cyan),0 0 18px rgba(255,30,142,.7),0 0 40px rgba(0,240,255,.4)}
+    93%{text-shadow:3px 0 var(--cyan),-3px 0 var(--magenta),0 0 18px rgba(255,30,142,.7)}95%{text-shadow:-4px 0 var(--red),4px 0 var(--cyan)}}}
+.titles p{margin:12px 0 0; color:var(--dim); max-width:44ch; font-size:14px; font-weight:700; letter-spacing:.02em; text-transform:uppercase}
+
+/* ---------- live bar ---------- */
+.live{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:20px 2px 0; font-family:var(--mono); font-size:12px}
+.status{display:inline-flex; align-items:center; gap:9px; letter-spacing:.14em; text-transform:uppercase; padding:7px 14px; border:1px solid var(--faint); font-weight:700; background:rgba(10,1,24,.6)}
+.dot{width:9px; height:9px; border-radius:50%; background:var(--faint)}
+.status.up{color:var(--green); border-color:var(--green); box-shadow:0 0 14px rgba(34,255,159,.4)}
+.status.up .dot{background:var(--green); box-shadow:0 0 8px var(--green)}
+.status.down{color:var(--red); border-color:var(--red); box-shadow:0 0 14px rgba(255,43,78,.4)}
+.status.down .dot{background:var(--red)}
+@media (prefers-reduced-motion:no-preference){.status.up .dot{animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,255,159,.7)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}}
+.online-names{color:var(--dim); letter-spacing:.06em; text-transform:uppercase} .online-names b{color:var(--cyan)}
+.updated{margin-left:auto; color:var(--faint); letter-spacing:.1em; text-transform:uppercase}
+
+/* ---------- vitals ---------- */
+.vitals{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 4px}
+.chip{font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(10,1,24,.6); border:1px solid rgba(0,240,255,.4);
+  padding:6px 11px; display:inline-flex; align-items:center; gap:7px; white-space:nowrap}
+.chip b{color:var(--cyan); font-weight:700; text-shadow:0 0 8px rgba(0,240,255,.6)} .chip.mag b{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
+.chip .k{color:var(--faint); text-transform:uppercase; font-size:10px; letter-spacing:.14em}
+
+/* ---------- section rule ---------- */
+.rule{display:flex; align-items:center; gap:14px; margin:40px 2px 18px}
+.rule h2{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:26px; font-weight:400; margin:0; letter-spacing:.02em; white-space:nowrap;
+  color:#fff; text-shadow:0 0 10px var(--magenta), 2px 2px 0 rgba(0,240,255,.35)}
+.rule .line{height:2px; flex:1; background:linear-gradient(90deg,var(--magenta),var(--cyan),transparent); box-shadow:0 0 8px rgba(0,240,255,.5)}
+.rule .sub{font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--faint)}
+
+/* ---------- standings ---------- */
+.stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.stat{position:relative; background:var(--panel); border:1px solid rgba(0,240,255,.45); padding:18px 16px 14px; box-shadow:inset 0 0 20px rgba(0,240,255,.05)}
+.stat::before,.stat::after{content:""; position:absolute; width:12px; height:12px; border:2px solid var(--cyan)}
+.stat::before{left:-1px; top:-1px; border-right:0; border-bottom:0} .stat::after{right:-1px; bottom:-1px; border-left:0; border-top:0}
+.stat .n{font-family:var(--disp); font-style:italic; font-size:44px; line-height:.85; color:#fff; font-variant-numeric:tabular-nums; text-shadow:0 0 14px currentColor}
+.stat .l{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); margin-top:11px}
+.stat.cyan .n{color:var(--cyan)} .stat.red .n{color:var(--red)} .stat.green .n{color:var(--green)} .stat.mag .n{color:var(--magenta)}
+
+.legends{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
+.legend{position:relative; background:var(--panel); border:1px solid var(--accent,var(--cyan)); padding:16px 16px 15px; overflow:hidden;
+  box-shadow:0 0 16px color-mix(in srgb, var(--accent,var(--cyan)) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--accent,var(--cyan)) 7%, transparent)}
+.legend.shame{--accent:var(--red)} .legend.tamer{--accent:var(--green)} .legend.apex{--accent:var(--magenta)}
+.legend .cap{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent)}
+.legend .who{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:26px; margin:8px 0 3px; color:#fff; line-height:.95; text-shadow:0 0 12px var(--accent)}
+.legend .meta{font-size:12.5px; color:var(--dim); text-transform:uppercase; letter-spacing:.03em} .legend .meta b{color:var(--accent); font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- tabs ---------- */
+.tabs{display:flex; gap:6px; flex-wrap:wrap; margin:42px 0 0}
+.tab{font-family:var(--disp); font-style:italic; font-size:16px; letter-spacing:.03em; text-transform:uppercase; color:var(--dim);
+  background:rgba(10,1,24,.5); border:1px solid var(--faint); padding:10px 16px; cursor:pointer; display:inline-flex; align-items:center; gap:9px}
+.tab:hover{color:var(--ink); border-color:var(--cyan)}
+.tab[aria-selected="true"]{color:#fff; border-color:var(--magenta); box-shadow:0 0 16px rgba(255,30,142,.5); background:rgba(255,30,142,.1)}
+.tab .cnt{font-family:var(--mono); font-style:normal; font-size:11px; font-variant-numeric:tabular-nums; color:var(--cyan); border:1px solid rgba(0,240,255,.4); padding:1px 7px}
+.panel{display:none; padding-top:20px} .panel.on{display:block; animation:fade .25s ease}
+@keyframes fade{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none}}
+
+/* ---------- entries ---------- */
+.entries{display:flex; flex-direction:column; gap:9px}
+.entry{display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center; background:var(--panel); border-left:3px solid var(--edge,var(--cyan));
+  border-top:1px solid rgba(255,255,255,.06); border-right:1px solid rgba(255,255,255,.05); border-bottom:1px solid rgba(0,0,0,.3); padding:13px 15px}
+.entry.death{--edge:var(--red)} .entry.tame{--edge:var(--green)} .entry.event{--edge:var(--purple)}
+.entry .mark{width:38px; height:38px; display:grid; place-items:center; font-size:19px; background:rgba(10,1,24,.7); border:1px solid var(--edge); box-shadow:0 0 10px color-mix(in srgb,var(--edge) 45%,transparent); flex:0 0 auto}
+.entry .body h4{margin:0; font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:19px; color:#fff; letter-spacing:.02em}
+.entry .body h4 .lvl{font-family:var(--mono); font-style:normal; font-size:12px; color:var(--cyan); margin-left:8px; font-variant-numeric:tabular-nums}
+.entry .body .sub{font-size:13px; color:var(--dim); margin-top:2px; text-transform:uppercase; letter-spacing:.03em} .entry .body .sub .by{color:var(--ink); font-weight:700}
+.entry .body .note{font-size:12.5px; color:var(--faint); font-style:italic; margin-top:3px}
+.entry .side{display:flex; flex-direction:column; align-items:flex-end; gap:6px}
+.entry .when{font-family:var(--mono); font-size:11px; color:var(--faint); font-variant-numeric:tabular-nums; white-space:nowrap}
+.tag{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); border:1px solid var(--red); padding:2px 7px; white-space:nowrap; box-shadow:0 0 8px rgba(255,43,78,.35)}
+.tag.green{color:var(--green); border-color:var(--green); box-shadow:0 0 8px rgba(34,255,159,.35)}
+.tag.purple{color:var(--purple); border-color:var(--purple); box-shadow:0 0 8px rgba(162,75,255,.35)}
+.empty{text-align:center; padding:42px 20px; border:1px dashed var(--faint); color:var(--dim); background:rgba(10,1,24,.4)}
+.empty .big{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:24px; color:#fff; margin-bottom:6px; text-shadow:0 0 12px var(--cyan)} .empty .em{font-size:34px; margin-bottom:10px}
+footer{margin-top:48px; text-align:center; color:var(--faint); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase}
+footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
+@media (max-width:720px){.stat-row{grid-template-columns:repeat(2,1fr)} .legends{grid-template-columns:1fr} .updated{margin-left:0}}
+@media (max-width:460px){.stat-row{grid-template-columns:1fr} .entry{grid-template-columns:auto 1fr}
+  .entry .side{grid-column:2; flex-direction:row; justify-content:space-between; align-items:center; margin-top:2px}}
+</style>
+</head>
+<body>
+<div class="saga">
+<div class="grid" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="banner">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="crest" aria-hidden="true"><b>406</b></div>
+    <div class="titles">
+      <p class="eyebrow">// Radical Reptile Warfare &middot; Est. 2026</p>
+      <h1>Saga of 406</h1>
+      <p>A live feed of the tribe's most heroic deeds and gloriously stupid deaths.</p>
+    </div>
+  </header>
+
+  <div class="live" id="live"></div>
+  <div class="vitals" id="vitals"></div>
+
+  <div class="rule"><h2>High Scores</h2><span class="line"></span><span class="sub">who rules the wasteland</span></div>
+  <div class="stat-row" id="stats"></div>
+  <div class="legends" id="legends"></div>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-tab="shame" aria-selected="true">&#9760; Wall of Shame <span class="cnt" id="cnt-shame">0</span></button>
+    <button class="tab" role="tab" data-tab="menagerie" aria-selected="false">&#129430; Beast Roster <span class="cnt" id="cnt-menagerie">0</span></button>
+    <button class="tab" role="tab" data-tab="chronicle" aria-selected="false">&#129706; Mission Log <span class="cnt" id="cnt-chronicle">0</span></button>
+  </div>
+  <section class="panel on" id="panel-shame" role="tabpanel"><div class="entries" id="list-shame"></div></section>
+  <section class="panel" id="panel-menagerie" role="tabpanel"><div class="entries" id="list-menagerie"></div></section>
+  <section class="panel" id="panel-chronicle" role="tabpanel"><div class="entries" id="list-chronicle"></div></section>
+
+  <footer>406 Server &middot; <span class="em">grind hard, log off happy</span> &middot; auto-synced from the mainframe</footer>
+</div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var REFRESH=90000;
+  var data={server:{name:"406 Server",map:"Ragnarok",mode:"PvE Co-op",online:false},online:[],deaths:[],tames:[],events:[],updated:0};
+
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];})}
+  function fmt(ts){var d=new Date(ts); if(isNaN(d)) return ""; return d.toLocaleDateString(undefined,{month:"short",day:"numeric"}).toUpperCase()+" '"+String(d.getFullYear()).slice(2);}
+  function ago(ms){var s=Math.max(0,(Date.now()-ms)/1000); if(s<60)return"just now"; if(s<3600)return Math.floor(s/60)+"m ago"; if(s<86400)return Math.floor(s/3600)+"h ago"; return Math.floor(s/86400)+"d ago";}
+  function tally(arr,k){var m={}; arr.forEach(function(o){var v=o[k]; if(!v)return; m[v]=(m[v]||0)+1;}); return m;}
+  function top(m){var b=null,n=0; for(var k in m){if(m[k]>n){n=m[k];b=k;}} return b?{name:b,n:n}:null;}
+
+  function renderLive(){
+    var up=data.server.online, on=data.online||[];
+    var names=on.length?'<span class="online-names"><b>'+on.length+'</b> jacked in: '+on.map(esc).join(", ")+'</span>':'<span class="online-names">nobody jacked in</span>';
+    $("#live").innerHTML='<span class="status '+(up?"up":"down")+'"><span class="dot"></span>'+(up?"Server Online":"Signal Lost")+'</span>'+(up?names:'')+'<span class="updated">synced '+(data.updated?ago(data.updated):"never")+'</span>';
+  }
+  function renderVitals(){
+    var s=data.server;
+    var v=[["Map",esc((s.map||"?").toUpperCase()),"mag"],["Mode",esc((s.mode||"?").toUpperCase()),""],
+      ["Harvest","3&times;",""],["XP","3&times;",""],["Taming","10&times;",""],["Hatch","25&times;","mag"],["Mature","20&times;","mag"],["Wild Cap","LV 150",""]];
+    $("#vitals").innerHTML=v.map(function(x){return '<span class="chip '+(x[2]||"")+'"><span class="k">'+x[0]+'</span><b>'+x[1]+'</b></span>';}).join("");
+  }
+  function renderStandings(){
+    var d=data.deaths,t=data.tames;
+    var daysSet={}; d.concat(t,data.events).forEach(function(o){var dt=new Date(o.ts); if(!isNaN(dt))daysSet[dt.toDateString()]=1;});
+    var stats=[["cyan",data.online.length,"Jacked In"],["red",d.length,"Body Count"],["green",t.length,"Beasts Jacked"],["mag",Object.keys(daysSet).length,"Days of Carnage"]];
+    $("#stats").innerHTML=stats.map(function(s){return '<div class="stat '+s[0]+'"><div class="n">'+s[1]+'</div><div class="l">'+s[2]+'</div></div>';}).join("");
+    var shamed=top(tally(d,"who")), tamer=top(tally(t,"tamer"));
+    var apex=t.slice().sort(function(a,b){return (+b.level||0)-(+a.level||0);})[0];
+    var nemesis=top(tally(d.map(function(x){return {k:(x.killer||"").trim()}}).filter(function(x){return x.k}),"k"));
+    var L=[
+      {c:"shame",cap:"&#9760; Most Shamed",who:shamed?esc(shamed.name):"&mdash;",meta:shamed?('<b>'+shamed.n+'</b> death'+(shamed.n>1?"s":"")+(nemesis?' &middot; nemesis '+esc(nemesis.name):"")):"nobody's died yet. sus."},
+      {c:"tamer",cap:"&#127942; Alpha Tamer",who:tamer?esc(tamer.name):"&mdash;",meta:tamer?('<b>'+tamer.n+'</b> beast'+(tamer.n>1?"s":"")+" jacked"):"roster empty"},
+      {c:"apex",cap:"&#9889; Apex Predator",who:apex?esc(apex.species):"&mdash;",meta:apex?((apex.name?'&ldquo;'+esc(apex.name)+'&rdquo; &middot; ':"")+'<b>LV '+(apex.level||"?")+'</b>'+(apex.tamer?" &middot; "+esc(apex.tamer):"")):"no beasts yet"}
+    ];
+    $("#legends").innerHTML=L.map(function(x){return '<div class="legend '+x.c+'"><div class="cap">'+x.cap+'</div><div class="who">'+x.who+'</div><div class="meta">'+x.meta+'</div></div>';}).join("");
+  }
+  function row(cls,mark,inner,side){return '<div class="entry '+cls+'"><div class="mark">'+mark+'</div><div class="body">'+inner+'</div><div class="side">'+side+'</div></div>';}
+  function emptyState(icon,big,sub){return '<div class="empty"><div class="em">'+icon+'</div><div class="big">'+big+'</div><div>'+sub+'</div></div>';}
+  function byNewest(a,b){return new Date(b.ts)-new Date(a.ts);}
+
+  function renderLists(){
+    $("#cnt-shame").textContent=data.deaths.length; $("#cnt-menagerie").textContent=data.tames.length; $("#cnt-chronicle").textContent=data.events.length;
+    var el=$("#list-shame");
+    el.innerHTML=data.deaths.length?data.deaths.slice().sort(byNewest).map(function(x){
+      var title=esc(x.who)+' <span style="font-weight:400;color:var(--dim);font-size:14px">&mdash; '+esc(x.cause||"met their end")+'</span>';
+      var sub=x.killer?'by <span class="by">'+esc(x.killer)+'</span>':"";
+      return row("death","&#9760;",'<h4>'+title+'</h4>'+(sub?'<div class="sub">'+sub+'</div>':""),'<span class="tag">KIA</span><span class="when">'+fmt(x.ts)+'</span>');
+    }).join(""):emptyState("&#128128;","No Casualties Yet","The second this server boots, the dying begins. Stay frosty.");
+    el=$("#list-menagerie");
+    el.innerHTML=data.tames.length?data.tames.slice().sort(byNewest).map(function(x){
+      var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
+      var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
+      var sub=esc(x.species)+(x.tamer?' &middot; jacked by <span class="by">'+esc(x.tamer)+'</span>':"");
+      return row("tame","&#129430;",'<h4>'+name+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag green">TAMED</span><span class="when">'+fmt(x.ts)+'</span>');
+    }).join(""):emptyState("&#129370;","Roster Empty","Every legend starts with one very angry cyber-Dodo.");
+    el=$("#list-chronicle");
+    el.innerHTML=data.events.length?data.events.slice().sort(byNewest).map(function(x){
+      return row("event","&#129706;",'<h4>'+esc(x.title)+'</h4>'+(x.note?'<div class="note" style="font-style:normal">'+esc(x.note)+'</div>':""),'<span class="tag purple">LOG</span><span class="when">'+fmt(x.ts)+'</span>');
+    }).join(""):emptyState("&#128220;","No Missions Logged","Boss kills and epic betrayals get immortalized here.");
+  }
+  function renderAll(){renderLive(); renderVitals(); renderStandings(); renderLists();}
+
+  $("#tabs").addEventListener("click",function(e){var b=e.target.closest(".tab"); if(!b)return;
+    document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-selected",t===b?"true":"false");});
+    document.querySelectorAll(".panel").forEach(function(p){p.classList.remove("on");});
+    $("#panel-"+b.dataset.tab).classList.add("on");});
+
+  function refresh(){
+    fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():Promise.reject(r.status);})
+      .then(function(j){data={server:j.server||data.server,online:j.online||[],deaths:j.deaths||[],tames:j.tames||[],events:j.events||[],updated:j.updated||Date.now()}; renderAll();})
+      .catch(function(){renderLive();});
+  }
+  renderAll(); refresh(); setInterval(refresh, REFRESH);
+})();
+</script>
+</body>
+</html>

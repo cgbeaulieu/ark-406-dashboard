@@ -1,0 +1,4 @@
+# Secrets and local-only state - never commit these
+collector/config.ps1
+collector/state.json
+collector/unparsed.log
