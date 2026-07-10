@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783661504751,
+    "updated":  1783663332797,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -26,6 +26,27 @@
                        "who":  "Soop",
                        "id":  "75cb36d3f1",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Dimorphodon",
+                       "ts":  "2026-07-10T00:02:12.7804316-06:00",
+                       "who":  "Soop",
+                       "id":  "10a90ef29d",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Carbonemys",
+                       "ts":  "2026-07-10T00:02:12.7814316-06:00",
+                       "who":  "Soop",
+                       "id":  "c587f395eb",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Dimorphodon",
+                       "ts":  "2026-07-10T00:02:12.7814316-06:00",
+                       "who":  "Babaloo",
+                       "id":  "c5b9b04053",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
@@ -36,6 +57,22 @@
                       "species":  "Lystrosaurus",
                       "ts":  "2026-07-09T23:27:59.6287533-06:00",
                       "tamer":  "Soop of Tribe Tiggles"
+                  },
+                  {
+                      "id":  "ba304e3558",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-10T00:02:12.7774306-06:00",
+                      "tamer":  "Babaloo of Tribe Tiggles"
+                  },
+                  {
+                      "id":  "ca50e79446",
+                      "name":  "",
+                      "level":  "",
+                      "species":  "",
+                      "ts":  "2026-07-10T00:02:12.7824315-06:00",
+                      "tamer":  "Babaloo of Tribe Tiggles"
                   }
               ],
     "events":  [
