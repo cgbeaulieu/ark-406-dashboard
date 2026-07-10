@@ -1,8 +1,48 @@
-{
-  "updated": 0,
-  "server": { "name": "406 Server", "map": "Ragnarok", "mode": "PvE Co-op", "online": false },
-  "online": [],
-  "deaths": [],
-  "tames": [],
-  "events": []
+﻿{
+    "updated":  1783655884743,
+    "server":  {
+                   "name":  "406 Server",
+                   "map":  "Ragnarok",
+                   "mode":  "PvE Co-op",
+                   "online":  true,
+                   "day":  null,
+                   "time":  null
+               },
+    "online":  [
+
+               ],
+    "deaths":  [
+                   {
+                       "killer":  "a Level 34 Raptor",
+                       "ts":  "2026-07-09T15:38:07.6786174-06:00",
+                       "who":  "Chugz",
+                       "id":  "s1",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "Gravity",
+                       "ts":  "2026-07-09T18:38:07.6786174-06:00",
+                       "who":  "Big Rig",
+                       "id":  "s2",
+                       "cause":  "Fell from a stupid height"
+                   }
+               ],
+    "tames":  [
+                  {
+                      "id":  "s3",
+                      "name":  "",
+                      "level":  "190",
+                      "species":  "Wyvern",
+                      "ts":  "2026-07-09T16:38:07.6786174-06:00",
+                      "tamer":  "Grillmaster"
+                  }
+              ],
+    "events":  [
+                   {
+                       "title":  "Server went live",
+                       "ts":  "2026-07-08T20:38:07.6786174-06:00",
+                       "id":  "s4",
+                       "note":  "First base raised at the green obelisk."
+                   }
+               ]
 }
