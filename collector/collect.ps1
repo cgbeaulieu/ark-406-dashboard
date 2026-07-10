@@ -106,7 +106,7 @@ function Strip-Rich([string]$s) {
 
 # Returns @{ deaths=@(...); tames=@(...) } parsed from a GetGameLog dump.
 function Parse-GameLog([string]$text, $state) {
-  $result = @{ deaths=@(); tames=@() }
+  $result = @{ deaths=@(); tames=@(); memoriam=@() }
   foreach ($raw in ($text -split "`n")) {
     $line = Strip-Rich $raw
     if (-not $line) { continue }
@@ -118,10 +118,18 @@ function Parse-GameLog([string]$text, $state) {
     if ($state.seen -contains $key) { continue }         # dedupe against history
     $matched = $false
 
-    # A tamed creature's death carries TWO paren groups "(Species) (Tribe)" before
-    # "was killed" (e.g. "Dodo - Lvl 93 (Dodo) (Tiggles) was killed..."). Skip those -
-    # the Wall of Shame is for people dying, not their dinos.
-    if ($line -match '\([^)]*\)\s+\([^)]*\)\s+was killed') { $matched = $true }
+    # A tamed creature's death carries TWO paren groups "(Species) (Tribe)":
+    #   "Dodo - Lvl 93 (Dodo) (Tiggles) was killed by a Dimorphodon - Lvl 50 ()!"
+    # These go to the In Memoriam graveyard, NOT the Wall of Shame.
+    if ($line -match '^(.+?)\s+-\s+Lvl\s+(\d+)\s*\(([^)]*)\)\s+\(([^)]*)\)\s+was killed(?:\s+by\s+(.+?))?!') {
+      $dKiller = if ($Matches[5]) { [regex]::Replace($Matches[5].Trim(), '\s*-\s+Lvl\s+\d+\s*\([^)]*\)\s*$', '').Trim() } else { "" }
+      $result.memoriam += @{
+        id=[guid]::NewGuid().ToString('n').Substring(0,10);
+        name=$Matches[1].Trim(); species=$Matches[3].Trim(); level=$Matches[2];
+        tribe=$Matches[4].Trim(); killer=$dKiller; ts=(Get-Date).ToString('o')
+      }
+      $matched = $true
+    }
 
     # DEATH by a killer:  "<Player> - Lvl N (Tribe) was killed by <killer> - Lvl M ()!"
     if (-not $matched -and $line -match '^(.+?)\s+-\s+Lvl\s+\d+\s*\([^)]*\)\s+was killed by\s+(.+?)!') {
@@ -179,6 +187,8 @@ if ($TestLog) {
   $r.deaths | ForEach-Object { Write-Host ("  {0,-14} <- {1}" -f $_.who, $_.killer) }
   Write-Host "TAMES ($($r.tames.Count)):"
   $r.tames | ForEach-Object { Write-Host ("  {0,-14} tamed {1} (Lvl {2})" -f $_.tamer, $_.species, $_.level) }
+  Write-Host "FALLEN DINOS ($($r.memoriam.Count)):"
+  $r.memoriam | ForEach-Object { Write-Host ("  {0,-14} ({1} Lvl {2}) fell to {3}" -f $_.name, $_.species, $_.level, $_.killer) }
   exit 0
 }
 
@@ -193,18 +203,19 @@ if ($Rebuild) {
   }
   $st = [pscustomobject]@{ seen = @() }
   $r = Parse-GameLog (($lines) -join "`n") $st
-  Save-State ([pscustomobject]@{ deaths=@($r.deaths); tames=@($r.tames); events=@($old.events); seen=@($st.seen) })
-  Write-Host ("Rebuilt from {0} remembered lines -> {1} deaths, {2} tames." -f $lines.Count, $r.deaths.Count, $r.tames.Count)
+  Save-State ([pscustomobject]@{ deaths=@($r.deaths); tames=@($r.tames); events=@($old.events); memoriam=@($r.memoriam); seen=@($st.seen) })
+  Write-Host ("Rebuilt from {0} remembered lines -> {1} deaths, {2} tames, {3} fallen dinos." -f $lines.Count, $r.deaths.Count, $r.tames.Count, $r.memoriam.Count)
   Write-Host "Run the collector once more (or wait for the schedule) to refresh data.json."
   exit 0
 }
 
 # ================= collect =================
 $state = Load-State
-$deaths = AsList $state.deaths
-$tames  = AsList $state.tames
-$events = AsList $state.events
-$seen   = AsList $state.seen
+$deaths   = AsList $state.deaths
+$tames    = AsList $state.tames
+$events   = AsList $state.events
+$memoriam = AsList $state.memoriam
+$seen     = AsList $state.seen
 $online = @()
 $serverUp = $false
 
@@ -217,6 +228,9 @@ if ($Offline) {
     [void]$deaths.Add(@{ id="s1"; who="Chugz"; cause="Slain in the wild"; killer="a Level 34 Raptor"; ts=$now.AddHours(-5).ToString('o') })
     [void]$deaths.Add(@{ id="s2"; who="Big Rig"; cause="Fell from a stupid height"; killer="Gravity"; ts=$now.AddHours(-2).ToString('o') })
     [void]$tames.Add(@{ id="s3"; tamer="Grillmaster"; species="Wyvern"; name=""; level="190"; ts=$now.AddHours(-4).ToString('o') })
+    [void]$tames.Add(@{ id="s5"; tamer="Chugz"; species="Raptor"; name=""; level="45"; ts=$now.AddHours(-6).ToString('o') })
+    [void]$memoriam.Add(@{ id="s6"; name="Raptor"; species="Raptor"; level="52"; tribe="406"; killer="an Alpha Rex"; ts=$now.AddHours(-1).ToString('o') })
+    [void]$memoriam.Add(@{ id="s7"; name="Sir Chomps"; species="Rex"; level="120"; tribe="406"; killer="a Giganotosaurus"; ts=$now.AddHours(-3).ToString('o') })
     [void]$events.Add(@{ id="s4"; title="Server went live"; note="First base raised at the green obelisk."; ts=$now.AddDays(-1).ToString('o') })
   }
 } else {
@@ -227,8 +241,9 @@ if ($Offline) {
     $serverUp = $true
     $log = Invoke-Rcon $Config.RconHost $Config.RconPort $Config.RconPassword "GetGameLog"
     $parsed = Parse-GameLog $log $seenObj
-    foreach ($d in $parsed.deaths) { [void]$deaths.Add($d) }
-    foreach ($t in $parsed.tames)  { [void]$tames.Add($t) }
+    foreach ($d in $parsed.deaths)   { [void]$deaths.Add($d) }
+    foreach ($t in $parsed.tames)    { [void]$tames.Add($t) }
+    foreach ($m in $parsed.memoriam) { [void]$memoriam.Add($m) }
     $seen = AsList $seenObj.seen
   } catch {
     Write-Host "Server not reachable over RCON ($($_.Exception.Message)). Marking offline."
@@ -237,18 +252,19 @@ if ($Offline) {
 }
 
 # ---------------- persist state + build data.json ----------------
-Save-State ([pscustomobject]@{ deaths=@($deaths); tames=@($tames); events=@($events); seen=@($seen) })
+Save-State ([pscustomobject]@{ deaths=@($deaths); tames=@($tames); events=@($events); memoriam=@($memoriam); seen=@($seen) })
 
 $data = [ordered]@{
   updated = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
   server  = [ordered]@{ name=$Config.ServerName; map=$Config.Map; mode=$Config.Mode; online=$serverUp }
-  online  = @($online)
-  deaths  = @($deaths)
-  tames   = @($tames)
-  events  = @($events)
+  online   = @($online)
+  deaths   = @($deaths)
+  tames    = @($tames)
+  memoriam = @($memoriam)
+  events   = @($events)
 }
 $data | ConvertTo-Json -Depth 8 | Set-Content $DataFile -Encoding utf8
-Write-Host ("Wrote {0}  (online: {1}, deaths: {2}, tames: {3})" -f $DataFile, $online.Count, $deaths.Count, $tames.Count)
+Write-Host ("Wrote {0}  (online: {1}, deaths: {2}, tames: {3}, fallen: {4})" -f $DataFile, $online.Count, $deaths.Count, $tames.Count, $memoriam.Count)
 
 # ---------------- publish ----------------
 $doPush = ($Config.Push -eq $true) -and (-not $NoPush)

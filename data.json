@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783697353730,
+    "updated":  1783702587059,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -12,96 +12,107 @@
     "deaths":  [
                    {
                        "killer":  "a Pachy",
-                       "ts":  "2026-07-10T09:14:54.9942951-06:00",
+                       "ts":  "2026-07-10T10:56:26.0871780-06:00",
                        "who":  "Soop",
-                       "id":  "b73cc82d19",
+                       "id":  "ab81d8269c",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "a Dilophosaur",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0951784-06:00",
                        "who":  "Soop",
-                       "id":  "3599a10a0a",
+                       "id":  "b637a1b3d7",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "a Dimorphodon",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0951784-06:00",
                        "who":  "Soop",
-                       "id":  "f3ad120d47",
+                       "id":  "f1eb1cb60c",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "a Carbonemys",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0961787-06:00",
                        "who":  "Soop",
-                       "id":  "d005d6620f",
+                       "id":  "025bd30add",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "a Dimorphodon",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0961787-06:00",
                        "who":  "Babaloo",
-                       "id":  "943f5ab8f5",
+                       "id":  "546f04faee",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "a Dimorphodon",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0961787-06:00",
                        "who":  "Babaloo",
-                       "id":  "55ec0196a2",
+                       "id":  "1008b8e4a9",
                        "cause":  "Slain in the wild"
                    },
                    {
                        "killer":  "an Ichthyornis",
-                       "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                       "ts":  "2026-07-10T10:56:26.0971793-06:00",
                        "who":  "Soop",
-                       "id":  "875c4981bc",
+                       "id":  "5cb417325f",
                        "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
                   {
-                      "id":  "176fc291e5",
+                      "id":  "22ba796fed",
                       "name":  "",
                       "level":  "209",
                       "species":  "Lystrosaurus",
-                      "ts":  "2026-07-10T09:14:55.0022974-06:00",
+                      "ts":  "2026-07-10T10:56:26.0951784-06:00",
                       "tamer":  "Soop"
                   },
                   {
-                      "id":  "f8d4b8f8ed",
+                      "id":  "480dbd71ad",
                       "name":  "",
                       "level":  "20",
                       "species":  "Baby Lystrosaurus",
-                      "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                      "ts":  "2026-07-10T10:56:26.0951784-06:00",
                       "tamer":  "Babaloo"
                   },
                   {
-                      "id":  "e7d969f058",
+                      "id":  "2fc2bd6c9f",
                       "name":  "",
                       "level":  "89",
                       "species":  "Dodo",
-                      "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                      "ts":  "2026-07-10T10:56:26.0961787-06:00",
                       "tamer":  "Babaloo"
                   },
                   {
-                      "id":  "5777456f99",
+                      "id":  "122fa90d6b",
                       "name":  "",
                       "level":  "84",
                       "species":  "Pteranodon",
-                      "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                      "ts":  "2026-07-10T10:56:26.0971793-06:00",
                       "tamer":  "Soop"
                   },
                   {
-                      "id":  "af06774987",
+                      "id":  "4c51367e89",
                       "name":  "",
                       "level":  "125",
                       "species":  "Parasaur",
-                      "ts":  "2026-07-10T09:14:55.0032974-06:00",
+                      "ts":  "2026-07-10T10:56:26.0971793-06:00",
                       "tamer":  "WesleyPipes"
                   }
               ],
+    "memoriam":  [
+                     {
+                         "id":  "3c63d03448",
+                         "name":  "Dodo",
+                         "tribe":  "Tiggles",
+                         "level":  "93",
+                         "species":  "Dodo",
+                         "ts":  "2026-07-10T10:56:26.0971793-06:00",
+                         "killer":  "a Dimorphodon"
+                     }
+                 ],
     "events":  [
 
                ]
