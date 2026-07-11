@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783745454832,
+    "updated":  1783774464789,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,8 +7,7 @@
                    "online":  true
                },
     "online":  [
-                   "soopa5106",
-                   "Prof. Merlyn"
+
                ],
     "deaths":  [
                    {
@@ -143,6 +142,20 @@
                        "who":  "Soop",
                        "id":  "3363b105d2",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-11T06:54:24.7629670-06:00",
+                       "who":  "Soop",
+                       "id":  "5933513a21",
+                       "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "a Therizinosaur",
+                       "ts":  "2026-07-11T06:54:24.7679641-06:00",
+                       "who":  "Rowena",
+                       "id":  "36414e6220",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
@@ -225,6 +238,14 @@
                       "species":  "Pegomastax",
                       "ts":  "2026-07-10T21:15:42.4982079-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "5b6838adca",
+                      "name":  "",
+                      "level":  "209",
+                      "species":  "Therizinosaur",
+                      "ts":  "2026-07-11T06:54:24.7709644-06:00",
+                      "tamer":  "Rowena"
                   }
               ],
     "memoriam":  [
@@ -272,6 +293,15 @@
                          "species":  "Pegomastax",
                          "ts":  "2026-07-10T21:15:42.4982079-06:00",
                          "killer":  "an Ichthyornis"
+                     },
+                     {
+                         "id":  "7070b78779",
+                         "name":  "Dead Meat",
+                         "tribe":  "Tiggles",
+                         "level":  "102",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-11T06:54:24.7689638-06:00",
+                         "killer":  "a Therizinosaur"
                      }
                  ],
     "events":  [
