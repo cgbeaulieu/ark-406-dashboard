@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783813476726,
+    "updated":  1783814076719,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,6 @@
                },
     "online":  [
                    "Mandalore051",
-                   "soopa5106",
                    "CURTdNASTY"
                ],
     "deaths":  [
@@ -279,6 +278,14 @@
                       "species":  "Rex",
                       "ts":  "2026-07-11T16:34:36.7891931-06:00",
                       "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "e4c3033a35",
+                      "name":  "",
+                      "level":  "89",
+                      "species":  "Doedicurus",
+                      "ts":  "2026-07-11T17:54:36.7078854-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
