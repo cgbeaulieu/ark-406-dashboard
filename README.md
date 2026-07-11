@@ -72,6 +72,11 @@ schtasks /Create /TN "406 Dashboard Collector" /TR "powershell -NoProfile -Execu
 ```
 > GitHub Pages has a soft limit of ~10 builds/hour, so 10-minute spacing keeps you safely under it.
 
+> ⚠️ **Always give the task the _absolute_ path to `collect.ps1`** (as above), or set its **"Start in"**
+> to `C:\ArkDashboard`. Task Scheduler runs actions from `C:\Windows\System32` by default, so a
+> **relative** path like `-File collector\collect.ps1` with no "Start in" silently fails **every**
+> run — the task shows `Last Result: 0xFFFD0000` and nothing updates. See Troubleshooting below.
+
 ---
 
 ## Files
@@ -98,3 +103,53 @@ from tamers, and skips rafts / tribe-level baby births.
 - `collect.ps1 -Rebuild` — re-parse the remembered history in `state.json` (and retry `unparsed.log`) with the current parser, fixing any older mis-parsed entries in place.
 
 If a new kind of line ever shows up in `unparsed.log`, paste it in and the regexes get a quick tweak.
+
+---
+
+## Troubleshooting
+
+### Dashboard isn't refreshing — the scheduled task "runs but does nothing"
+Symptom: the site's "synced Xm ago" keeps growing; new deaths/tames never appear. The task looks
+like it's firing on schedule, but check its **Last Result**:
+
+```powershell
+Get-ScheduledTaskInfo -TaskName "Ark Server Dashboard json Push" | Select LastRunTime, LastTaskResult
+```
+
+- **`LastTaskResult` is `0`** → the collector ran fine; there was just nothing new (or no players on).
+- **`LastTaskResult` is `0xFFFD0000` (-196608)** → the task can't find `collect.ps1`. This happens when
+  the task's action uses a **relative** script path and has no **"Start in"** directory, so it launches
+  from `C:\Windows\System32`. Fix the action to use the absolute path (no admin password needed — this
+  edits the action in place and leaves the run-as identity alone, so it works even if you only know
+  your PIN):
+
+  ```powershell
+  # Run in an ELEVATED PowerShell (Run as administrator)
+  $action = New-ScheduledTaskAction -Execute "powershell" `
+    -Argument "-NoProfile -ExecutionPolicy Bypass -File C:\ArkDashboard\collector\collect.ps1" `
+    -WorkingDirectory "C:\ArkDashboard"
+  Set-ScheduledTask -TaskName "Ark Server Dashboard json Push" -Action $action
+  ```
+
+  > Use `Set-ScheduledTask` (PowerShell), **not** `schtasks /Change` — the latter tries to re-store the
+  > account's run-as password and prompts for it, which fails if you sign in with a Windows Hello PIN.
+
+  Then confirm it works end to end:
+
+  ```powershell
+  Start-ScheduledTask -TaskName "Ark Server Dashboard json Push"; Start-Sleep 20
+  (Get-ScheduledTaskInfo -TaskName "Ark Server Dashboard json Push").LastTaskResult   # want 0
+  git -C C:\ArkDashboard log -1 --oneline                                             # want a fresh "data ..." commit
+  ```
+
+> **Note on the task name:** the bundled `install-collector-task.ps1` registers the task as
+> **`406 Dashboard Collector`**. If your box already has a hand-made task under a different name
+> (this server's is **`Ark Server Dashboard json Push`**), just fix that one — don't run the installer
+> too, or you'll end up with two tasks fighting over the same push.
+
+### Dashboard shows "Signal Lost" / "Server Online" but nobody listed
+- **Signal Lost** = the collector couldn't reach RCON. Confirm the server is up and port `27020` is
+  listening (`Get-NetTCPConnection -LocalPort 27020 -State Listen`), and that `RconPassword` in
+  `config.ps1` matches `GameUserSettings.ini`.
+- **Server Online + "nobody jacked in"** is *not* an error — it just means RCON replied
+  `No Players Connected`. Names appear as soon as someone logs into the world.
