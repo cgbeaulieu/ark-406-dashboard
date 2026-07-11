@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783800276763,
+    "updated":  1783800876777,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,8 @@
                },
     "online":  [
                    "Mandalore051",
-                   "Nailedit"
+                   "Nailedit",
+                   "soopa5106"
                ],
     "deaths":  [
                    {
@@ -247,6 +248,14 @@
                       "species":  "Therizinosaur",
                       "ts":  "2026-07-11T06:54:24.7709644-06:00",
                       "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "c14f25defe",
+                      "name":  "",
+                      "level":  "22",
+                      "species":  "Pegomastax",
+                      "ts":  "2026-07-11T14:14:36.7656231-06:00",
+                      "tamer":  "Onyx of Tribe"
                   }
               ],
     "memoriam":  [
@@ -303,6 +312,15 @@
                          "species":  "Pteranodon",
                          "ts":  "2026-07-11T06:54:24.7689638-06:00",
                          "killer":  "a Therizinosaur"
+                     },
+                     {
+                         "id":  "93d3cd2217",
+                         "name":  "Rude",
+                         "tribe":  "",
+                         "level":  "22",
+                         "species":  "Pegomastax",
+                         "ts":  "2026-07-11T14:14:36.7686234-06:00",
+                         "killer":  "Onyx - Lvl 7-355070061 ()"
                      }
                  ],
     "events":  [
