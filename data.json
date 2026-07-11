@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783803876763,
+    "updated":  1783804477558,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -157,6 +157,13 @@
                        "who":  "Rowena",
                        "id":  "36414e6220",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-11T15:14:37.5466086-06:00",
+                       "who":  "Soop",
+                       "id":  "b8c476bb58",
+                       "cause":  "Died mysteriously"
                    }
                ],
     "tames":  [
