@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783739742505,
+    "updated":  1783744960898,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,8 @@
                    "online":  true
                },
     "online":  [
-                   "CURTdNASTY"
+                   "soopa5106",
+                   "Prof. Merlyn"
                ],
     "deaths":  [
                    {
@@ -134,6 +135,13 @@
                        "ts":  "2026-07-10T21:15:42.4972105-06:00",
                        "who":  "MikeHoncho",
                        "id":  "a754e24bdf",
+                       "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-10T22:42:40.8718513-06:00",
+                       "who":  "Soop",
+                       "id":  "3363b105d2",
                        "cause":  "Died mysteriously"
                    }
                ],
