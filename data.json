@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783808676828,
+    "updated":  1783809276801,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -270,6 +270,14 @@
                       "level":  "29",
                       "species":  "Vulture",
                       "ts":  "2026-07-11T16:24:36.8176221-06:00",
+                      "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "a3e7c216a3",
+                      "name":  "",
+                      "level":  "194",
+                      "species":  "Rex",
+                      "ts":  "2026-07-11T16:34:36.7891931-06:00",
                       "tamer":  "MikeHoncho"
                   }
               ],
