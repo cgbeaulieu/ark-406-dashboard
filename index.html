@@ -106,6 +106,20 @@ html,body{background:var(--void)}
 .legend .who{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:26px; margin:8px 0 3px; color:#fff; line-height:.95; text-shadow:0 0 12px var(--accent)}
 .legend .meta{font-size:12.5px; color:var(--dim); text-transform:uppercase; letter-spacing:.03em} .legend .meta b{color:var(--accent); font-family:var(--mono); font-variant-numeric:tabular-nums}
 
+/* ---------- kill board ---------- */
+.killboard{display:flex; flex-direction:column; gap:8px}
+.kill{display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center; background:var(--panel);
+  border-left:3px solid var(--red); border-top:1px solid rgba(255,255,255,.06); border-right:1px solid rgba(255,255,255,.05); border-bottom:1px solid rgba(0,0,0,.3); padding:12px 15px}
+.kill .rank{font-family:var(--disp); font-style:italic; font-size:27px; line-height:1; min-width:40px; text-align:center; color:var(--faint); font-variant-numeric:tabular-nums; text-shadow:0 0 8px currentColor}
+.kill.top1{border-left-color:var(--yellow); box-shadow:0 0 16px rgba(255,211,25,.22)} .kill.top1 .rank{color:var(--yellow)}
+.kill.top2 .rank{color:#d6def0} .kill.top3 .rank{color:var(--orange)}
+.kill .who{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:20px; color:#fff; letter-spacing:.02em; line-height:1; text-shadow:0 0 10px rgba(255,43,78,.35)}
+.kill .sub{font-size:12px; color:var(--faint); text-transform:uppercase; letter-spacing:.04em; margin-top:4px} .kill .sub b{color:var(--dim); font-weight:700}
+.kill .bar{height:6px; margin-top:9px; background:rgba(255,255,255,.06)} .kill .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--orange),var(--red),var(--magenta)); box-shadow:0 0 10px rgba(255,43,78,.5)}
+.kill .count{font-family:var(--disp); font-style:italic; font-size:34px; color:var(--red); font-variant-numeric:tabular-nums; text-shadow:0 0 14px rgba(255,43,78,.6); line-height:.82; text-align:right}
+.kill .count small{display:block; font-family:var(--mono); font-style:normal; font-size:9px; letter-spacing:.16em; color:var(--faint); text-transform:uppercase; margin-top:5px}
+@media (max-width:460px){.kill{gap:10px} .kill .rank{font-size:22px; min-width:28px} .kill .count{font-size:28px}}
+
 /* ---------- tabs ---------- */
 .tabs{display:flex; gap:6px; flex-wrap:wrap; margin:42px 0 0}
 .tab{font-family:var(--disp); font-style:italic; font-size:16px; letter-spacing:.03em; text-transform:uppercase; color:var(--dim);
@@ -166,6 +180,9 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
   <div class="rule"><h2>High Scores</h2><span class="line"></span><span class="sub">who rules the wasteland</span></div>
   <div class="stat-row" id="stats"></div>
   <div class="legends" id="legends"></div>
+
+  <div class="rule"><h2>Kill Board</h2><span class="line"></span><span class="sub">confirmed player kills</span></div>
+  <div class="killboard" id="killboard"></div>
 
   <div class="tabs" role="tablist" id="tabs">
     <button class="tab" role="tab" data-tab="shame" aria-selected="true">&#9760; Wall of Shame <span class="cnt" id="cnt-shame">0</span></button>
@@ -277,7 +294,39 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
       return row("event","&#129706;",'<h4>'+esc(x.title)+'</h4>'+(x.note?'<div class="note" style="font-style:normal">'+esc(x.note)+'</div>':""),'<span class="tag purple">LOG</span><span class="when">'+fmt(x.ts)+'</span>');
     }).join(""):emptyState("&#128220;","No Missions Logged","Boss kills and epic betrayals get immortalized here.");
   }
-  function renderAll(){renderLive(); renderVitals(); renderStandings(); renderLists();}
+  // ---- Kill Board: overall kills credited to a player. The tribe log only names a
+  // player as a killer in two cases: PvP (a death whose killer is a player) and slaying
+  // another tribe's tamed dino (a memoriam entry whose killer is a player). Wild-creature
+  // kills aren't logged by ARK, so they can't be counted. Players are identified by matching
+  // the (level-suffix-stripped) killer against the roster of everyone who's died or tamed.
+  function cleanKiller(s){return String(s==null?"":s).replace(/\s*-\s+Lvl.*$/i,"").trim();}
+  function killBoard(){
+    var roster={};
+    data.deaths.forEach(function(d){if(d.who)roster[d.who]=1;});
+    data.tames.forEach(function(t){if(t.tamer)roster[t.tamer]=1;});
+    var kills={}, victims={};
+    function credit(name,target){if(!name)return; kills[name]=(kills[name]||0)+1;
+      if(target){(victims[name]=victims[name]||{})[target]=(victims[name][target]||0)+1;}}
+    data.deaths.forEach(function(d){var k=cleanKiller(d.killer); if(k&&roster[k])credit(k,d.who);});
+    (data.memoriam||[]).forEach(function(m){var k=cleanKiller(m.killer); if(k&&roster[k])credit(k,m.species||m.name);});
+    return Object.keys(kills).map(function(name){var v=top(victims[name]);
+      return {name:name, n:kills[name], prey:v?v.name:null, preyN:v?v.n:0};
+    }).sort(function(a,b){return b.n-a.n || a.name.localeCompare(b.name);});
+  }
+  function renderKillboard(){
+    var rows=killBoard(), el=$("#killboard");
+    if(!rows.length){el.innerHTML=emptyState("&#9876;&#65039;","No Confirmed Kills","PvP throwdowns and slain enemy beasts get tallied here. So far, everyone's playing nice."); return;}
+    var max=rows[0].n;
+    el.innerHTML=rows.map(function(r,i){
+      var cls="kill"+(i<3?" top"+(i+1):"");
+      var pct=Math.max(8,Math.round(r.n/max*100));
+      var prey=r.prey?'most hunted &middot; <b>'+esc(r.prey)+'</b>'+(r.preyN>1?" &times;"+r.preyN:""):"&nbsp;";
+      return '<div class="'+cls+'"><div class="rank">'+(i+1)+'</div>'+
+        '<div><div class="who">'+esc(r.name)+'</div><div class="sub">'+prey+'</div><div class="bar"><i style="width:'+pct+'%"></i></div></div>'+
+        '<div class="count">'+r.n+'<small>kill'+(r.n>1?"s":"")+'</small></div></div>';
+    }).join("");
+  }
+  function renderAll(){renderLive(); renderVitals(); renderStandings(); renderKillboard(); renderLists();}
 
   $("#tabs").addEventListener("click",function(e){var b=e.target.closest(".tab"); if(!b)return;
     document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-selected",t===b?"true":"false");});
