@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783830276853,
+    "updated":  1783830876779,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -194,6 +194,27 @@
                        "ts":  "2026-07-11T22:24:36.8310169-06:00",
                        "who":  "Onyx",
                        "id":  "7117aed0a6",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Megalosaurus",
+                       "ts":  "2026-07-11T22:34:36.7691722-06:00",
+                       "who":  "Rowena",
+                       "id":  "5e44d4890a",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Megalosaurus",
+                       "ts":  "2026-07-11T22:34:36.7701727-06:00",
+                       "who":  "Soop",
+                       "id":  "17e6f98efa",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "Babaloo",
+                       "ts":  "2026-07-11T22:34:36.7701727-06:00",
+                       "who":  "Onyx",
+                       "id":  "fcb4f7829a",
                        "cause":  "Slain in the wild"
                    }
                ],
@@ -398,6 +419,15 @@
                          "species":  "Pegomastax",
                          "ts":  "2026-07-11T14:14:36.7686234-06:00",
                          "killer":  "Onyx - Lvl 7-355070061 ()"
+                     },
+                     {
+                         "id":  "06a10d19a8",
+                         "name":  "ChrissyBOI",
+                         "tribe":  "Tiggles",
+                         "level":  "237",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-11T22:34:36.7651734-06:00",
+                         "killer":  "a Megalosaurus"
                      }
                  ],
     "events":  [
