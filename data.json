@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783831476839,
+    "updated":  1783832076804,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -361,6 +361,14 @@
                       "species":  "Pteranodon",
                       "ts":  "2026-07-11T21:44:36.7374668-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "3bac113d5a",
+                      "name":  "",
+                      "level":  "142",
+                      "species":  "Griffin",
+                      "ts":  "2026-07-11T22:54:36.7824698-06:00",
+                      "tamer":  "MikeHoncho"
                   }
               ],
     "memoriam":  [
