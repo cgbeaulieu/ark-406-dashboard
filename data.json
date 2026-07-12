@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783833876816,
+    "updated":  1783834476749,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -467,6 +467,24 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-11T22:34:36.7651734-06:00",
                          "killer":  "a Megalosaurus"
+                     },
+                     {
+                         "id":  "5fd454ed33",
+                         "name":  "Goldido",
+                         "tribe":  "Tiggles",
+                         "level":  "29",
+                         "species":  "Dodo",
+                         "ts":  "2026-07-11T23:34:36.7365301-06:00",
+                         "killer":  "a Dilophosaur"
+                     },
+                     {
+                         "id":  "2f6e908dca",
+                         "name":  "Goldodo",
+                         "tribe":  "Tiggles",
+                         "level":  "37",
+                         "species":  "Dodo",
+                         "ts":  "2026-07-11T23:34:36.7385311-06:00",
+                         "killer":  "a Dilophosaur"
                      }
                  ],
     "events":  [
