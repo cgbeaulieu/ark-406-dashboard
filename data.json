@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783880077070,
+    "updated":  1783880677064,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,8 @@
                },
     "online":  [
                    "xBabaloox",
-                   "Mandalore051"
+                   "Mandalore051",
+                   "CURTdNASTY"
                ],
     "deaths":  [
                    {
@@ -514,6 +515,15 @@
                          "species":  "Dodo",
                          "ts":  "2026-07-11T23:34:36.7385311-06:00",
                          "killer":  "a Dilophosaur"
+                     },
+                     {
+                         "id":  "40ea636767",
+                         "name":  "Adolescent Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "110",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-12T12:24:37.0534251-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
