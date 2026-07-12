@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783829677443,
+    "updated":  1783830276853,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -10,7 +10,8 @@
                    "soopa5106",
                    "Prof. Merlyn",
                    "Nailedit",
-                   "xBabaloox"
+                   "xBabaloox",
+                   "CURTdNASTY"
                ],
     "deaths":  [
                    {
@@ -186,6 +187,13 @@
                        "ts":  "2026-07-11T21:54:36.7560913-06:00",
                        "who":  "Soop",
                        "id":  "a4e07fc329",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Triceratops",
+                       "ts":  "2026-07-11T22:24:36.8310169-06:00",
+                       "who":  "Onyx",
+                       "id":  "7117aed0a6",
                        "cause":  "Slain in the wild"
                    }
                ],
