@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783833276781,
+    "updated":  1783833876816,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -369,6 +369,30 @@
                       "species":  "Griffin",
                       "ts":  "2026-07-11T22:54:36.7824698-06:00",
                       "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "252b7d3125",
+                      "name":  "",
+                      "level":  "37",
+                      "species":  "Dodo",
+                      "ts":  "2026-07-11T23:24:36.8039217-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "e6b175de71",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Pteranodon",
+                      "ts":  "2026-07-11T23:24:36.8069217-06:00",
+                      "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "1035e42306",
+                      "name":  "",
+                      "level":  "29",
+                      "species":  "Dodo",
+                      "ts":  "2026-07-11T23:24:36.8069217-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
