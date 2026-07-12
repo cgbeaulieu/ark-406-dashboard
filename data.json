@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783842276726,
+    "updated":  1783842876732,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -404,6 +404,14 @@
                       "level":  "217",
                       "species":  "Dire Bear",
                       "ts":  "2026-07-12T01:34:36.7235531-06:00",
+                      "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "5c5035c8d6",
+                      "name":  "",
+                      "level":  "209",
+                      "species":  "Dire Bear",
+                      "ts":  "2026-07-12T01:54:36.7207681-06:00",
                       "tamer":  "MikeHoncho"
                   }
               ],
