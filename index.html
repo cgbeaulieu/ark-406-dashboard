@@ -148,8 +148,6 @@ html,body{background:var(--void)}
 .tag.green{color:var(--green); border-color:var(--green); box-shadow:0 0 8px rgba(34,255,159,.35)}
 .tag.purple{color:var(--purple); border-color:var(--purple); box-shadow:0 0 8px rgba(162,75,255,.35)}
 .tag.rip{color:#c9bce8; border-color:#7a6ca8; box-shadow:0 0 8px rgba(122,108,168,.4)}
-.memoriam-head{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:19px; color:#d6ccef; letter-spacing:.03em; margin:26px 0 12px; padding-top:16px; border-top:1px solid rgba(122,108,168,.4); text-shadow:0 0 10px rgba(122,108,168,.5)}
-.memoriam-head .submuted{font-family:var(--mono); font-style:normal; font-size:11px; text-transform:none; letter-spacing:0; color:var(--faint)}
 .empty{text-align:center; padding:42px 20px; border:1px dashed var(--faint); color:var(--dim); background:rgba(10,1,24,.4)}
 .empty .big{font-family:var(--disp); font-style:italic; text-transform:uppercase; font-size:24px; color:#fff; margin-bottom:6px; text-shadow:0 0 12px var(--cyan)} .empty .em{font-size:34px; margin-bottom:10px}
 footer{margin-top:48px; text-align:center; color:var(--faint); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase}
@@ -187,10 +185,12 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
   <div class="tabs" role="tablist" id="tabs">
     <button class="tab" role="tab" data-tab="shame" aria-selected="true">&#9760; Wall of Shame <span class="cnt" id="cnt-shame">0</span></button>
     <button class="tab" role="tab" data-tab="menagerie" aria-selected="false">&#129430; Beast Roster <span class="cnt" id="cnt-menagerie">0</span></button>
+    <button class="tab" role="tab" data-tab="memoriam" aria-selected="false">&#129702; In Memoriam <span class="cnt" id="cnt-memoriam">0</span></button>
     <button class="tab" role="tab" data-tab="chronicle" aria-selected="false">&#129706; Mission Log <span class="cnt" id="cnt-chronicle">0</span></button>
   </div>
   <section class="panel on" id="panel-shame" role="tabpanel"><div class="entries" id="list-shame"></div></section>
   <section class="panel" id="panel-menagerie" role="tabpanel"><div class="entries" id="list-menagerie"></div></section>
+  <section class="panel" id="panel-memoriam" role="tabpanel"><div class="entries" id="list-memoriam"></div></section>
   <section class="panel" id="panel-chronicle" role="tabpanel"><div class="entries" id="list-chronicle"></div></section>
 
   <footer>406 Server &middot; <span class="em">grind hard, log off happy</span> &middot; auto-synced from the mainframe</footer>
@@ -248,8 +248,8 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
       var sub=x.killer?'by <span class="by">'+esc(x.killer)+'</span>':"";
       return row("death","&#9760;",'<h4>'+title+'</h4>'+(sub?'<div class="sub">'+sub+'</div>':""),'<span class="tag">KIA</span><span class="when">'+fmt(x.ts)+'</span>');
     }).join(""):emptyState("&#128128;","No Casualties Yet","The second this server boots, the dying begins. Stay frosty.");
-    // ---- Beast Roster: living vs fallen. Match fallen (unnamed) dinos to a same-species tame.
-    el=$("#list-menagerie");
+    // ---- Beast Roster (living) + In Memoriam (fallen). Match fallen (unnamed) dinos to a
+    // same-species tame so a grave carries that beast's tamed/fell history.
     var norm=function(s){return String(s||"").replace(/^baby\s+/i,"").trim().toLowerCase();};
     var mem=(data.memoriam||[]).slice(), claimed={}, ripFor={};
     data.tames.slice().sort(function(a,b){return new Date(a.ts)-new Date(b.ts);}).forEach(function(t){
@@ -260,35 +260,35 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
         }
       }
     });
+    var living=data.tames.filter(function(t){return !ripFor[t.id];});
     var unmatched=mem.filter(function(m){return !claimed[m.id];});
-    $("#cnt-menagerie").textContent=data.tames.length+unmatched.length;
-    var html="";
-    if(data.tames.length){
-      html+=data.tames.slice().sort(byNewest).map(function(x){
-        var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
-        var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
-        var m=ripFor[x.id];
-        if(m){
-          var subd=esc(x.species)+(x.tamer?' &middot; tamed by <span class="by">'+esc(x.tamer)+'</span>':"");
-          var note='&#128367; tamed '+fmt(x.ts)+' &middot; fell '+fmt(m.ts)+(m.killer?' to <span class="by">'+esc(m.killer)+'</span>':"");
-          return row("tame grave","&#128128;",'<h4>'+name+lvl+'</h4><div class="sub">'+subd+'</div><div class="note" style="font-style:normal">'+note+'</div>','<span class="tag rip">&#9760; RIP</span><span class="when">'+fmt(m.ts)+'</span>');
-        }
-        var sub=esc(x.species)+(x.tamer?' &middot; jacked by <span class="by">'+esc(x.tamer)+'</span>':"");
-        return row("tame","&#129430;",'<h4>'+name+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag green">TAMED</span><span class="when">'+fmt(x.ts)+'</span>');
-      }).join("");
-    } else if(!unmatched.length){
-      html=emptyState("&#129370;","Roster Empty","Every legend starts with one very angry cyber-Dodo.");
-    }
-    if(unmatched.length){
-      html+='<div class="memoriam-head">&#129706; In Memoriam <span class="submuted">&mdash; fallen beasts we couldn’t trace to a tame</span></div>';
-      html+=unmatched.slice().sort(byNewest).map(function(m){
-        var nm=norm(m.name)===norm(m.species)?esc(m.species):'&ldquo;'+esc(m.name)+'&rdquo; <span style="color:var(--dim);font-weight:400">('+esc(m.species)+')</span>';
-        var lvl=m.level?'<span class="lvl">LV '+esc(m.level)+'</span>':"";
-        var sub='fell to <span class="by">'+esc(m.killer||"the wild")+'</span>'+(m.tribe?' &middot; tribe '+esc(m.tribe):"");
-        return row("tame grave","&#128128;",'<h4>'+nm+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag rip">&#9760; RIP</span><span class="when">'+fmt(m.ts)+'</span>');
-      }).join("");
-    }
-    el.innerHTML=html;
+    // Beast Roster: living beasts only.
+    $("#cnt-menagerie").textContent=living.length;
+    el=$("#list-menagerie");
+    el.innerHTML=living.length?living.slice().sort(byNewest).map(function(x){
+      var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
+      var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
+      var sub=esc(x.species)+(x.tamer?' &middot; jacked by <span class="by">'+esc(x.tamer)+'</span>':"");
+      return row("tame","&#129430;",'<h4>'+name+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag green">TAMED</span><span class="when">'+fmt(x.ts)+'</span>');
+    }).join(""):emptyState("&#129370;","Roster Empty","Every legend starts with one very angry cyber-Dodo.");
+    // In Memoriam: every fallen beast — matched graves (with full history) + untraced fallen.
+    var graves=data.tames.filter(function(t){return ripFor[t.id];}).map(function(x){
+      var m=ripFor[x.id];
+      var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
+      var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
+      var subd=esc(x.species)+(x.tamer?' &middot; tamed by <span class="by">'+esc(x.tamer)+'</span>':"");
+      var note='&#128367; tamed '+fmt(x.ts)+' &middot; fell '+fmt(m.ts)+(m.killer?' to <span class="by">'+esc(m.killer)+'</span>':"");
+      return {ts:m.ts, html:row("tame grave","&#128128;",'<h4>'+name+lvl+'</h4><div class="sub">'+subd+'</div><div class="note" style="font-style:normal">'+note+'</div>','<span class="tag rip">&#9760; RIP</span><span class="when">'+fmt(m.ts)+'</span>')};
+    });
+    var strays=unmatched.map(function(m){
+      var nm=norm(m.name)===norm(m.species)?esc(m.species):'&ldquo;'+esc(m.name)+'&rdquo; <span style="color:var(--dim);font-weight:400">('+esc(m.species)+')</span>';
+      var lvl=m.level?'<span class="lvl">LV '+esc(m.level)+'</span>':"";
+      var sub='fell to <span class="by">'+esc(m.killer||"the wild")+'</span>'+(m.tribe?' &middot; tribe '+esc(m.tribe):"");
+      return {ts:m.ts, html:row("tame grave","&#128128;",'<h4>'+nm+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag rip">&#9760; RIP</span><span class="when">'+fmt(m.ts)+'</span>')};
+    });
+    var fallen=graves.concat(strays);
+    $("#cnt-memoriam").textContent=fallen.length;
+    $("#list-memoriam").innerHTML=fallen.length?fallen.sort(byNewest).map(function(f){return f.html;}).join(""):emptyState("&#129702;","None Fallen Yet","Every beast on the roster still draws breath. Long may it last.");
     el=$("#list-chronicle");
     el.innerHTML=data.events.length?data.events.slice().sort(byNewest).map(function(x){
       return row("event","&#129706;",'<h4>'+esc(x.title)+'</h4>'+(x.note?'<div class="note" style="font-style:normal">'+esc(x.note)+'</div>':""),'<span class="tag purple">LOG</span><span class="when">'+fmt(x.ts)+'</span>');
