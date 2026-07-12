@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783881277059,
+    "updated":  1783881877026,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -422,6 +422,22 @@
                       "level":  "140",
                       "species":  "Baby Lystrosaurus",
                       "ts":  "2026-07-12T10:14:37.0171185-06:00",
+                      "tamer":  "Mandalore"
+                  },
+                  {
+                      "id":  "9a37a10569",
+                      "name":  "",
+                      "level":  "100",
+                      "species":  "Juvenile Hyaenodon",
+                      "ts":  "2026-07-12T12:44:37.0129587-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "e764e99046",
+                      "name":  "",
+                      "level":  "29",
+                      "species":  "Argentavis",
+                      "ts":  "2026-07-12T12:44:37.0169585-06:00",
                       "tamer":  "Mandalore"
                   }
               ],
