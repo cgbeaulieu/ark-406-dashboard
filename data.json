@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783826676774,
+    "updated":  1783827276775,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -170,6 +170,13 @@
                        "ts":  "2026-07-11T19:14:36.7367071-06:00",
                        "who":  "MikeHoncho",
                        "id":  "f22bd15729",
+                       "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-11T21:34:36.7615635-06:00",
+                       "who":  "Soop",
+                       "id":  "c9f355fecf",
                        "cause":  "Died mysteriously"
                    }
                ],
