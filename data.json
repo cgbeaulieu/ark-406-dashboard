@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783827276775,
+    "updated":  1783827876749,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -308,6 +308,14 @@
                       "species":  "Stegosaurus",
                       "ts":  "2026-07-11T21:14:36.6944048-06:00",
                       "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "a051a9f853",
+                      "name":  "",
+                      "level":  "67",
+                      "species":  "Pteranodon",
+                      "ts":  "2026-07-11T21:44:36.7374668-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
