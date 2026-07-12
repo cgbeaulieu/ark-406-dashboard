@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783882477053,
+    "updated":  1783883077028,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,9 +7,7 @@
                    "online":  true
                },
     "online":  [
-                   "xBabaloox",
-                   "Mandalore051",
-                   "CURTdNASTY"
+                   "xBabaloox"
                ],
     "deaths":  [
                    {
