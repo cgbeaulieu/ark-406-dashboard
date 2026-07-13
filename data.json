@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783907077059,
+    "updated":  1783907677155,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -452,6 +452,14 @@
                       "level":  "224",
                       "species":  "Argentavis",
                       "ts":  "2026-07-12T18:44:37.0365757-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "4351f01bf6",
+                      "name":  "",
+                      "level":  "145",
+                      "species":  "Juvenile Argentavis",
+                      "ts":  "2026-07-12T19:54:37.1238721-06:00",
                       "tamer":  "Babaloo"
                   }
               ],
