@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783917277068,
+    "updated":  1783917877967,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -464,6 +464,22 @@
                       "level":  "145",
                       "species":  "Juvenile Argentavis",
                       "ts":  "2026-07-12T19:54:37.1238721-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "b99ef13da6",
+                      "name":  "",
+                      "level":  "90",
+                      "species":  "Baby Argentavis",
+                      "ts":  "2026-07-12T22:44:37.9470486-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "2413a68b81",
+                      "name":  "",
+                      "level":  "150",
+                      "species":  "Baby Allosaurus",
+                      "ts":  "2026-07-12T22:44:37.9629236-06:00",
                       "tamer":  "Babaloo"
                   }
               ],
