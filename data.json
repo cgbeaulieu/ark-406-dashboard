@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783904677101,
+    "updated":  1783905277085,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -572,6 +572,15 @@
                          "level":  "214",
                          "species":  "Pteranodon",
                          "ts":  "2026-07-12T19:04:37.0926705-06:00",
+                         "killer":  ""
+                     },
+                     {
+                         "id":  "e576210713",
+                         "name":  "Juvenile Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "142",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-12T19:14:37.0850246-06:00",
                          "killer":  ""
                      }
                  ],
