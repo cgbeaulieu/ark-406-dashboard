@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783918477066,
+    "updated":  1783919077056,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -488,6 +488,14 @@
                       "species":  "Baby Allosaurus",
                       "ts":  "2026-07-12T22:44:37.9629236-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "948a0823fe",
+                      "name":  "",
+                      "level":  "217",
+                      "species":  "Rex",
+                      "ts":  "2026-07-12T23:04:37.0404256-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
@@ -616,6 +624,15 @@
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-12T19:14:37.0850246-06:00",
                          "killer":  ""
+                     },
+                     {
+                         "id":  "caaf0a53f6",
+                         "name":  "Juvenile Argentavis",
+                         "tribe":  "Tiggles",
+                         "level":  "90",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-12T23:04:37.0564599-06:00",
+                         "killer":  "a Raptor"
                      }
                  ],
     "events":  [
