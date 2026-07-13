@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783926277724,
+    "updated":  1783926877043,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -506,6 +506,14 @@
                       "level":  "202",
                       "species":  "Megaloceros",
                       "ts":  "2026-07-12T23:34:37.0994745-06:00",
+                      "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "be3dee7170",
+                      "name":  "",
+                      "level":  "74",
+                      "species":  "Dung Beetle",
+                      "ts":  "2026-07-13T01:14:37.0301009-06:00",
                       "tamer":  "MikeHoncho"
                   }
               ],
