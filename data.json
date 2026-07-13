@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783904077129,
+    "updated":  1783904677101,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -563,6 +563,15 @@
                          "level":  "178",
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-12T15:34:37.0571732-06:00",
+                         "killer":  ""
+                     },
+                     {
+                         "id":  "a1f745e4af",
+                         "name":  "Adolescent Pterry",
+                         "tribe":  "Tiggles",
+                         "level":  "214",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-12T19:04:37.0926705-06:00",
                          "killer":  ""
                      }
                  ],
