@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1783919077056,
+    "updated":  1783919677060,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -229,6 +229,13 @@
                        "ts":  "2026-07-12T22:54:37.0503688-06:00",
                        "who":  "Rowena",
                        "id":  "1b21886175",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "an Allosaurus",
+                       "ts":  "2026-07-12T23:14:37.0442960-06:00",
+                       "who":  "Rowena",
+                       "id":  "0efa39182a",
                        "cause":  "Slain in the wild"
                    }
                ],
