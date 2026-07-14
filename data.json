@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784007877150,
+    "updated":  1784008477054,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -243,6 +243,20 @@
                        "ts":  "2026-07-13T01:44:37.0626781-06:00",
                        "who":  "WesleyPipes",
                        "id":  "1498f068d7",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-13T23:54:37.0545960-06:00",
+                       "who":  "MikeHoncho",
+                       "id":  "1594feee5d",
+                       "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "a Giganotosaurus",
+                       "ts":  "2026-07-13T23:54:37.0545960-06:00",
+                       "who":  "Rowena",
+                       "id":  "333f838e17",
                        "cause":  "Slain in the wild"
                    }
                ],
@@ -697,6 +711,15 @@
                          "species":  "Dilophosaur",
                          "ts":  "2026-07-13T23:44:37.1186121-06:00",
                          "killer":  "a Deinotherium"
+                     },
+                     {
+                         "id":  "44ca07e3e8",
+                         "name":  "Heavylift",
+                         "tribe":  "Tiggles",
+                         "level":  "60",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-13T23:54:37.0386064-06:00",
+                         "killer":  "a Giganotosaurus"
                      }
                  ],
     "events":  [
