@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784005477090,
+    "updated":  1784006077110,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -11,8 +11,7 @@
                    "CURTdNASTY",
                    "soopa5106",
                    "xBabaloox",
-                   "Mandalore051",
-                   "Nailedit"
+                   "Mandalore051"
                ],
     "deaths":  [
                    {
@@ -535,6 +534,14 @@
                       "species":  "Giganotosaurus",
                       "ts":  "2026-07-13T19:14:37.1519776-06:00",
                       "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "2733a665ce",
+                      "name":  "",
+                      "level":  "142",
+                      "species":  "Dilophosaur",
+                      "ts":  "2026-07-13T23:14:37.0986428-06:00",
+                      "tamer":  "Mandalore"
                   }
               ],
     "memoriam":  [
