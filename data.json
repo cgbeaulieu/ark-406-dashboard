@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784007277121,
+    "updated":  1784007877150,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -688,6 +688,15 @@
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-13T23:34:37.1081448-06:00",
                          "killer":  ""
+                     },
+                     {
+                         "id":  "178bf21b89",
+                         "name":  "Clannfear",
+                         "tribe":  "Tiggles",
+                         "level":  "148",
+                         "species":  "Dilophosaur",
+                         "ts":  "2026-07-13T23:44:37.1186121-06:00",
+                         "killer":  "a Deinotherium"
                      }
                  ],
     "events":  [
