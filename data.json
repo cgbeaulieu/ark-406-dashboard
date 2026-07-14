@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784006677156,
+    "updated":  1784007277121,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -679,6 +679,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-12T23:04:37.0564599-06:00",
                          "killer":  "a Raptor"
+                     },
+                     {
+                         "id":  "af1cfabd9b",
+                         "name":  "Juvenile Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "98",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-13T23:34:37.1081448-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
