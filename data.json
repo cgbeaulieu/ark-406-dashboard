@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784090077190,
+    "updated":  1784090677194,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -736,6 +736,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-13T23:54:37.0386064-06:00",
                          "killer":  "a Giganotosaurus"
+                     },
+                     {
+                         "id":  "9491734ef1",
+                         "name":  "Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "209",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-14T22:44:37.1788325-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
