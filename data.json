@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784093678716,
+    "updated":  1784094278126,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,11 @@
                    "online":  true
                },
     "online":  [
-
+                   "xBabaloox",
+                   "soopa5106",
+                   "Nailedit",
+                   "CURTdNASTY",
+                   "Prof. Merlyn"
                ],
     "deaths":  [
                    {
@@ -254,6 +258,13 @@
                        "who":  "Rowena",
                        "id":  "333f838e17",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-14T23:44:38.1008956-06:00",
+                       "who":  "Onyx",
+                       "id":  "832b6dbcdc",
+                       "cause":  "Died mysteriously"
                    }
                ],
     "tames":  [
@@ -568,6 +579,14 @@
                       "species":  "Gigantopithecus",
                       "ts":  "2026-07-14T21:04:37.1846766-06:00",
                       "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "e65c69e0c7",
+                      "name":  "",
+                      "level":  "196",
+                      "species":  "Brontosaurus",
+                      "ts":  "2026-07-14T23:44:38.1168076-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
