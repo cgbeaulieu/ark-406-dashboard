@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784084077055,
+    "updated":  1784084677197,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -560,6 +560,14 @@
                       "species":  "Argentavis",
                       "ts":  "2026-07-14T00:34:37.0671368-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "d7d0f4452e",
+                      "name":  "",
+                      "level":  "216",
+                      "species":  "Gigantopithecus",
+                      "ts":  "2026-07-14T21:04:37.1846766-06:00",
+                      "tamer":  "MikeHoncho"
                   }
               ],
     "memoriam":  [
