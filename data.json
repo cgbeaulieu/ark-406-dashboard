@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784094278126,
+    "updated":  1784094877279,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -9,7 +9,6 @@
     "online":  [
                    "xBabaloox",
                    "soopa5106",
-                   "Nailedit",
                    "CURTdNASTY",
                    "Prof. Merlyn"
                ],
@@ -759,6 +758,15 @@
                          "level":  "209",
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-14T22:44:37.1788325-06:00",
+                         "killer":  ""
+                     },
+                     {
+                         "id":  "c62a8add80",
+                         "name":  "Adolescent Allen Iverson",
+                         "tribe":  "Tiggles",
+                         "level":  "202",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-14T23:54:37.2632194-06:00",
                          "killer":  ""
                      }
                  ],
