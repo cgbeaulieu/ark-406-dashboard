@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784180678276,
+    "updated":  1784181277337,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -10,7 +10,8 @@
                    "Prof. Merlyn",
                    "Nailedit",
                    "CURTdNASTY",
-                   "soopa5106"
+                   "soopa5106",
+                   "xBabaloox"
                ],
     "deaths":  [
                    {
@@ -608,6 +609,22 @@
                       "species":  "Juvenile Mammoth",
                       "ts":  "2026-07-15T22:54:37.3298364-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "1f2793d7a4",
+                      "name":  "",
+                      "level":  "22",
+                      "species":  "Raptor",
+                      "ts":  "2026-07-15T23:54:37.3250234-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "95291402cf",
+                      "name":  "",
+                      "level":  "67",
+                      "species":  "Raptor",
+                      "ts":  "2026-07-15T23:54:37.3280238-06:00",
+                      "tamer":  "Onyx"
                   }
               ],
     "memoriam":  [
