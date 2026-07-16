@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784177077385,
+    "updated":  1784177677341,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -585,6 +585,14 @@
                       "species":  "Brontosaurus",
                       "ts":  "2026-07-14T23:44:38.1168076-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "2dd9ee7c78",
+                      "name":  "",
+                      "level":  "90",
+                      "species":  "Juvenile Mammoth",
+                      "ts":  "2026-07-15T22:54:37.3298364-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
