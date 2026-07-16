@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784180077386,
+    "updated":  1784180678276,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,6 @@
                },
     "online":  [
                    "Prof. Merlyn",
-                   "xBabaloox",
                    "Nailedit",
                    "CURTdNASTY",
                    "soopa5106"
@@ -271,6 +270,13 @@
                        "ts":  "2026-07-15T23:34:37.3721727-06:00",
                        "who":  "Babaloo",
                        "id":  "d3d72e487b",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Triceratops",
+                       "ts":  "2026-07-15T23:44:38.2641410-06:00",
+                       "who":  "MikeHoncho",
+                       "id":  "ebaf171d16",
                        "cause":  "Slain in the wild"
                    }
                ],
