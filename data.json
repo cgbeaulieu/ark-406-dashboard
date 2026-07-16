@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784179477991,
+    "updated":  1784180077386,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -265,6 +265,13 @@
                        "who":  "Onyx",
                        "id":  "832b6dbcdc",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "an Argentavis",
+                       "ts":  "2026-07-15T23:34:37.3721727-06:00",
+                       "who":  "Babaloo",
+                       "id":  "d3d72e487b",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
