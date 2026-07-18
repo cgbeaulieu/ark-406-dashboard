@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784413477113,
+    "updated":  1784414077119,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -635,6 +635,14 @@
                       "level":  "60",
                       "species":  "Juvenile Mammoth",
                       "ts":  "2026-07-18T00:24:37.1365134-06:00",
+                      "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "b2e40fa504",
+                      "name":  "",
+                      "level":  "50",
+                      "species":  "Juvenile Unicorn",
+                      "ts":  "2026-07-18T16:34:37.1060640-06:00",
                       "tamer":  "Rowena"
                   }
               ],
