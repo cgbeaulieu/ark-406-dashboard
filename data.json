@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784394277781,
+    "updated":  1784394877128,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -846,6 +846,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-17T23:34:37.1619616-06:00",
                          "killer":  "a Direwolf"
+                     },
+                     {
+                         "id":  "d382cc5fb6",
+                         "name":  "Lowlvltrash",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "144",
+                         "species":  "Parasaur",
+                         "ts":  "2026-07-18T11:14:37.1283359-06:00",
+                         "killer":  "MikeHoncho - Lvl 77-787282541 (PowerBottomBoys)"
                      }
                  ],
     "events":  [
