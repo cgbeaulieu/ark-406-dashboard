@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784351677130,
+    "updated":  1784352277148,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,8 @@
                },
     "online":  [
                    "Prof. Merlyn",
-                   "soopa5106"
+                   "soopa5106",
+                   "CURTdNASTY"
                ],
     "deaths":  [
                    {
@@ -275,6 +276,13 @@
                        "ts":  "2026-07-15T23:44:38.2641410-06:00",
                        "who":  "MikeHoncho",
                        "id":  "ebaf171d16",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Purlovia",
+                       "ts":  "2026-07-17T23:24:37.1323132-06:00",
+                       "who":  "Rowena",
+                       "id":  "54dd14a58f",
                        "cause":  "Slain in the wild"
                    }
                ],
