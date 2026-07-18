@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784352277148,
+    "updated":  1784352877161,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -830,6 +830,15 @@
                          "species":  "Pteranodon",
                          "ts":  "2026-07-17T23:04:37.1260887-06:00",
                          "killer":  "a Triceratops"
+                     },
+                     {
+                         "id":  "b8e8a8fbe6",
+                         "name":  "Alms_for_the_Poor",
+                         "tribe":  "Tiggles",
+                         "level":  "177",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-17T23:34:37.1619616-06:00",
+                         "killer":  "a Direwolf"
                      }
                  ],
     "events":  [
