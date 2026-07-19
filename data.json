@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784438677181,
+    "updated":  1784439277136,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -283,6 +283,13 @@
                        "who":  "Rowena",
                        "id":  "54dd14a58f",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-18T23:34:37.1210627-06:00",
+                       "who":  "Soop",
+                       "id":  "68b7d989e3",
+                       "cause":  "Died mysteriously"
                    }
                ],
     "tames":  [
@@ -863,6 +870,15 @@
                          "species":  "Parasaur",
                          "ts":  "2026-07-18T11:14:37.1283359-06:00",
                          "killer":  "MikeHoncho - Lvl 77-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "bef60b5f73",
+                         "name":  "Pteranodon",
+                         "tribe":  "Tiggles",
+                         "level":  "153",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-18T23:34:37.1369849-06:00",
+                         "killer":  "a Triceratops"
                      }
                  ],
     "events":  [
