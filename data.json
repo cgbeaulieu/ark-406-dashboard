@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784483077141,
+    "updated":  1784483677166,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -296,6 +296,13 @@
                        "who":  "MikeHoncho",
                        "id":  "724a8c7565",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "Lightning Wyvern - Lvl 207 (Lightning Wyvern) (PowerBottomBoys)",
+                       "ts":  "2026-07-19T11:54:37.1662311-06:00",
+                       "who":  "MikeHoncho",
+                       "id":  "a4c3ca1ffb",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
@@ -658,6 +665,14 @@
                       "species":  "Juvenile Unicorn",
                       "ts":  "2026-07-18T16:34:37.1060640-06:00",
                       "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "365c9fc22a",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Mantis",
+                      "ts":  "2026-07-19T11:54:37.1567299-06:00",
+                      "tamer":  "MikeHoncho"
                   }
               ],
     "memoriam":  [
