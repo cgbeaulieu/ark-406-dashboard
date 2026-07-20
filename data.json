@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784529877183,
+    "updated":  1784530477169,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -900,6 +900,33 @@
                          "species":  "Pteranodon",
                          "ts":  "2026-07-18T23:34:37.1369849-06:00",
                          "killer":  "a Triceratops"
+                     },
+                     {
+                         "id":  "40701cfffe",
+                         "name":  "Baby Lightning Wyvern",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "15",
+                         "species":  "Lightning Wyvern",
+                         "ts":  "2026-07-20T00:54:37.1586120-06:00",
+                         "killer":  "MikeHoncho - Lvl 80-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "daad6acbe1",
+                         "name":  "Baby Poison Wyvern",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "85",
+                         "species":  "Poison Wyvern",
+                         "ts":  "2026-07-20T00:54:37.1698155-06:00",
+                         "killer":  "MikeHoncho - Lvl 80-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "2afdcc8a9c",
+                         "name":  "Baby Lightning Wyvern",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "50",
+                         "species":  "Lightning Wyvern",
+                         "ts":  "2026-07-20T00:54:37.1698155-06:00",
+                         "killer":  "MikeHoncho - Lvl 80-787282541 (PowerBottomBoys)"
                      }
                  ],
     "events":  [
