@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784531677186,
+    "updated":  1784532277235,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -680,6 +680,14 @@
                       "level":  "224",
                       "species":  "Mantis",
                       "ts":  "2026-07-20T01:14:37.1710733-06:00",
+                      "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "e336c892ed",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Jerboa",
+                      "ts":  "2026-07-20T01:24:37.2243525-06:00",
                       "tamer":  "MikeHoncho"
                   }
               ],
