@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784612077134,
+    "updated":  1784612677073,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -740,6 +740,14 @@
                       "species":  "Argentavis",
                       "ts":  "2026-07-20T23:24:37.1046063-06:00",
                       "tamer":  "Onyx"
+                  },
+                  {
+                      "id":  "788edd0383",
+                      "name":  "",
+                      "level":  "217",
+                      "species":  "Dung Beetle",
+                      "ts":  "2026-07-20T23:44:37.0608393-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
