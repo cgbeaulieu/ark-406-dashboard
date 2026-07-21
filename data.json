@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784607277108,
+    "updated":  1784607877716,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -9,7 +9,8 @@
     "online":  [
                    "xBabaloox",
                    "Prof. Merlyn",
-                   "Nailedit"
+                   "Nailedit",
+                   "soopa5106"
                ],
     "deaths":  [
                    {
@@ -304,6 +305,13 @@
                        "ts":  "2026-07-19T11:54:37.1662311-06:00",
                        "who":  "MikeHoncho",
                        "id":  "a4c3ca1ffb",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Giganotosaurus",
+                       "ts":  "2026-07-20T22:24:37.7033684-06:00",
+                       "who":  "Onyx",
+                       "id":  "6a0d6ed058",
                        "cause":  "Slain in the wild"
                    }
                ],
@@ -945,6 +953,15 @@
                          "species":  "Lightning Wyvern",
                          "ts":  "2026-07-20T00:54:37.1698155-06:00",
                          "killer":  "MikeHoncho - Lvl 80-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "c581888573",
+                         "name":  "Trailer",
+                         "tribe":  "Tiggles",
+                         "level":  "104",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-20T22:24:37.7073683-06:00",
+                         "killer":  "a Giganotosaurus"
                      }
                  ],
     "events":  [
