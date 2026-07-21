@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784604877131,
+    "updated":  1784605477134,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,9 @@
                    "online":  true
                },
     "online":  [
-
+                   "xBabaloox",
+                   "Prof. Merlyn",
+                   "Nailedit"
                ],
     "deaths":  [
                    {
