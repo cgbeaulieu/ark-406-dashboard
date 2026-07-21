@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784610877137,
+    "updated":  1784611477114,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -724,6 +724,22 @@
                       "species":  "Yutyrannus",
                       "ts":  "2026-07-20T23:04:37.1108986-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "a2865f350f",
+                      "name":  "",
+                      "level":  "60",
+                      "species":  "Juvenile Brontosaurus",
+                      "ts":  "2026-07-20T23:24:37.1026029-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "8c278a34a8",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Argentavis",
+                      "ts":  "2026-07-20T23:24:37.1046063-06:00",
+                      "tamer":  "Onyx"
                   }
               ],
     "memoriam":  [
