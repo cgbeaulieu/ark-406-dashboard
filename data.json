@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784609077094,
+    "updated":  1784609677901,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -699,6 +699,22 @@
                       "species":  "Jerboa",
                       "ts":  "2026-07-20T01:24:37.2243525-06:00",
                       "tamer":  "MikeHoncho"
+                  },
+                  {
+                      "id":  "3fa7575b26",
+                      "name":  "",
+                      "level":  "20",
+                      "species":  "Juvenile Carnotaurus",
+                      "ts":  "2026-07-20T22:54:37.8840567-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "63a1079ac4",
+                      "name":  "",
+                      "level":  "85",
+                      "species":  "Juvenile Direwolf",
+                      "ts":  "2026-07-20T22:54:37.8900566-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
@@ -962,6 +978,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-20T22:24:37.7073683-06:00",
                          "killer":  "a Giganotosaurus"
+                     },
+                     {
+                         "id":  "44a702d7e9",
+                         "name":  "Juvenile Carnotaurus",
+                         "tribe":  "Tiggles",
+                         "level":  "20",
+                         "species":  "Carnotaurus",
+                         "ts":  "2026-07-20T22:54:37.8890565-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
