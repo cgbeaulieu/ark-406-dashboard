@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784612677073,
+    "updated":  1784613277149,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,11 +7,11 @@
                    "online":  true
                },
     "online":  [
-                   "xBabaloox",
                    "Prof. Merlyn",
                    "Nailedit",
                    "soopa5106",
-                   "DirkDiggler"
+                   "DirkDiggler",
+                   "xBabaloox"
                ],
     "deaths":  [
                    {
@@ -747,6 +747,22 @@
                       "level":  "217",
                       "species":  "Dung Beetle",
                       "ts":  "2026-07-20T23:44:37.0608393-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "f7373fb030",
+                      "name":  "",
+                      "level":  "74",
+                      "species":  "Dilophosaur",
+                      "ts":  "2026-07-20T23:54:37.1346457-06:00",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "b8ae87a9c7",
+                      "name":  "",
+                      "level":  "188",
+                      "species":  "Dilophosaur",
+                      "ts":  "2026-07-20T23:54:37.1376456-06:00",
                       "tamer":  "Babaloo"
                   }
               ],
