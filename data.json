@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784615677133,
+    "updated":  1784616277109,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,9 +7,7 @@
                    "online":  true
                },
     "online":  [
-                   "Prof. Merlyn",
-                   "soopa5106",
-                   "DirkDiggler"
+                   "Prof. Merlyn"
                ],
     "deaths":  [
                    {
