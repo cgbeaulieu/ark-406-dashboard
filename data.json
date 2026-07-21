@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784609677901,
+    "updated":  1784610277123,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -714,6 +714,14 @@
                       "level":  "85",
                       "species":  "Juvenile Direwolf",
                       "ts":  "2026-07-20T22:54:37.8900566-06:00",
+                      "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "e14dabd902",
+                      "name":  "",
+                      "level":  "188",
+                      "species":  "Yutyrannus",
+                      "ts":  "2026-07-20T23:04:37.1108986-06:00",
                       "tamer":  "Soop"
                   }
               ],
