@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784696677183,
+    "updated":  1784697277168,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -800,6 +800,14 @@
                       "level":  "20",
                       "species":  "Juvenile Parasaur",
                       "ts":  "2026-07-21T21:54:37.1514647-06:00",
+                      "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "545666d836",
+                      "name":  "",
+                      "level":  "90",
+                      "species":  "Juvenile Stegosaurus",
+                      "ts":  "2026-07-21T23:14:37.1527102-06:00",
                       "tamer":  "Soop"
                   }
               ],
