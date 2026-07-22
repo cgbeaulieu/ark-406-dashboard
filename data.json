@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784691877175,
+    "updated":  1784692477151,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -784,6 +784,22 @@
                       "level":  "22",
                       "species":  "Juvenile Pteranodon",
                       "ts":  "2026-07-21T00:34:37.1205740-06:00",
+                      "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "6f5b016215",
+                      "name":  "",
+                      "level":  "55",
+                      "species":  "Baby Triceratops",
+                      "ts":  "2026-07-21T21:54:37.1471517-06:00",
+                      "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "27a9ef71f2",
+                      "name":  "",
+                      "level":  "20",
+                      "species":  "Juvenile Parasaur",
+                      "ts":  "2026-07-21T21:54:37.1514647-06:00",
                       "tamer":  "Soop"
                   }
               ],
