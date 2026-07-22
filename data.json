@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784682277151,
+    "updated":  1784682877117,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1065,6 +1065,24 @@
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-21T00:04:37.1752281-06:00",
                          "killer":  "an Ichthyornis"
+                     },
+                     {
+                         "id":  "635e1420de",
+                         "name":  "Baby Peasant",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "55",
+                         "species":  "Fire Wyvern",
+                         "ts":  "2026-07-21T19:14:37.1042196-06:00",
+                         "killer":  "MikeHoncho - Lvl 82-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "59c2145658",
+                         "name":  "Baby Peasant",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "60",
+                         "species":  "Fire Wyvern",
+                         "ts":  "2026-07-21T19:14:37.1070070-06:00",
+                         "killer":  "MikeHoncho - Lvl 82-787282541 (PowerBottomBoys)"
                      }
                  ],
     "events":  [
