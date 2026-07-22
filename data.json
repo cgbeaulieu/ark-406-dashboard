@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784684077156,
+    "updated":  1784684677135,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,7 @@
                    "online":  true
                },
     "online":  [
-                   "CURTdNASTY"
+
                ],
     "deaths":  [
                    {
@@ -1083,6 +1083,24 @@
                          "species":  "Fire Wyvern",
                          "ts":  "2026-07-21T19:14:37.1070070-06:00",
                          "killer":  "MikeHoncho - Lvl 82-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "f4b63889e4",
+                         "name":  "Baby Poison Wyvern",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "50",
+                         "species":  "Poison Wyvern",
+                         "ts":  "2026-07-21T19:44:37.1234623-06:00",
+                         "killer":  "MikeHoncho - Lvl 83-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "592b012a83",
+                         "name":  "Baby Lightning Wyvern",
+                         "tribe":  "PowerBottomBoys",
+                         "level":  "55",
+                         "species":  "Lightning Wyvern",
+                         "ts":  "2026-07-21T19:44:37.1254617-06:00",
+                         "killer":  "MikeHoncho - Lvl 83-787282541 (PowerBottomBoys)"
                      }
                  ],
     "events":  [
