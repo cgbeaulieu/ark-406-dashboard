@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784847878354,
+    "updated":  1784848477209,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,7 @@
                    "online":  true
                },
     "online":  [
-
+                   "DirkDiggler"
                ],
     "deaths":  [
                    {
