@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784857477173,
+    "updated":  1784858077192,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -310,6 +310,13 @@
                        "who":  "Onyx",
                        "id":  "6a0d6ed058",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-07-23T19:54:37.1849128-06:00",
+                       "who":  "WesleyPipes",
+                       "id":  "809c8a5c3e",
+                       "cause":  "Died mysteriously"
                    }
                ],
     "tames":  [
