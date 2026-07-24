@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784918677216,
+    "updated":  1784919277201,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -318,6 +318,13 @@
                        "who":  "WesleyPipes",
                        "id":  "809c8a5c3e",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "a Castoroides",
+                       "ts":  "2026-07-24T12:54:37.1881482-06:00",
+                       "who":  "MikeHoncho",
+                       "id":  "190de5efb7",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
