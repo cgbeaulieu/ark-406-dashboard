@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1784958877246,
+    "updated":  1784959477247,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,6 @@
                },
     "online":  [
                    "Prof. Merlyn",
-                   "soopa5106",
                    "xBabaloox"
                ],
     "deaths":  [
@@ -824,6 +823,14 @@
                       "species":  "Juvenile Stegosaurus",
                       "ts":  "2026-07-21T23:14:37.1527102-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "33926b0d1e",
+                      "name":  "",
+                      "level":  "194",
+                      "species":  "Sabertooth",
+                      "ts":  "2026-07-25T00:04:37.2320507-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
