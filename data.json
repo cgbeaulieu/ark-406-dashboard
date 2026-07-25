@@ -1,14 +1,13 @@
 ﻿{
-    "updated":  1785012277231,
+    "updated":  1785012878552,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
                    "mode":  "PvE Co-op",
-                   "online":  true
+                   "online":  false
                },
     "online":  [
-                   "soopa5106",
-                   "Prof. Merlyn"
+
                ],
     "deaths":  [
                    {
