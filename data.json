@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785035677235,
+    "updated":  1785036277216,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -840,6 +840,14 @@
                       "species":  "Juvenile Kairuku",
                       "ts":  "2026-07-25T21:04:37.2203259-06:00",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "baaaf76db6",
+                      "name":  "",
+                      "level":  "89",
+                      "species":  "Terror Bird",
+                      "ts":  "2026-07-25T21:24:37.2036193-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
