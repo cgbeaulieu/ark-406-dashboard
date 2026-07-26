@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785086077453,
+    "updated":  1785086677405,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,6 @@
                    "online":  true
                },
     "online":  [
-                   "Prof. Merlyn",
                    "Mandalore051",
                    "xBabaloox"
                ],
@@ -1065,6 +1064,15 @@
                       "ts":  "2026-07-26T10:14:37.4374739-06:00",
                       "species":  "Juvenile Argentavis",
                       "level":  "20",
+                      "tamer":  "Mandalore"
+                  },
+                  {
+                      "id":  "04453251d6",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T11:24:37.3922238-06:00",
+                      "species":  "Pulmonoscorpius",
+                      "level":  "224",
                       "tamer":  "Mandalore"
                   }
               ],
