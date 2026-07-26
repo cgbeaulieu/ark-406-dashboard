@@ -152,19 +152,22 @@ function Parse-GameLog([string]$text, $state) {
 
     # TAME:  "<Player> of Tribe <T> Tamed a <Species> - Lvl N (Class)!"
     #   ARK also logs some real adult tames (beavers, ankylos, aquatics) with no individual
-    #   name, as "Tribe <T> Tamed a <Species>". Those are genuine tames -> credit the tribe.
-    #   It uses the SAME form for breeding births ("Tribe Tamed a Baby/Juvenile X"), which are
-    #   NOT tames -> skip those by their maturation-stage species prefix.
+    #   name, as "Tribe <T> Tamed a <Species>". Those are genuine tames but ARK never records
+    #   WHO tamed them -> we record the tribe (in `tribe`) and leave `tamer` empty, so a tribe
+    #   never masquerades as a player on the leaderboard. It uses the SAME form for breeding
+    #   births ("Tribe Tamed a Baby/Juvenile X"), which are NOT tames -> skip by stage prefix.
     if (-not $matched -and $line -match '[Tt]amed a[n]?\s+(.+?)!') {
       $rawTame  = $Matches[1].Trim()
       $tamerRaw = ($line -replace '\s+[Tt]amed a[n]?\s.*$', '').Trim()
       $isTribe  = $tamerRaw -match '^(Your\s+Tribe|Tribe)\b'
       if ($isTribe) {
-        $tamer = [regex]::Replace($tamerRaw, '^(Your\s+Tribe|Tribe)\s*', '').Trim()   # "Tribe Tiggles" -> "Tiggles"
-        if (-not $tamer) { $tamer = "the tribe" }
+        $tamer = ""                                                                    # no individual credited
+        $tribe = [regex]::Replace($tamerRaw, '^(Your\s+Tribe|Tribe)\s*', '').Trim()    # "Tribe Tiggles" -> "Tiggles"
       } else {
         $tamer = [regex]::Replace($tamerRaw, '\s+of\s+Tribe\s+.*$', '').Trim()         # "Soop of Tribe Tiggles" -> "Soop"
         $tamer = [regex]::Replace($tamer, '\s*-\s+Lvl.*$', '').Trim()
+        $tm    = [regex]::Match($tamerRaw, '\s+of\s+Tribe\s+(.+)$')                     # capture their tribe if named
+        $tribe = if ($tm.Success) { $tm.Groups[1].Value.Trim() } else { "" }
       }
       $lvl     = [regex]::Match($rawTame, '-\s+Lvl\s+(\d+)')
       $level   = if ($lvl.Success) { $lvl.Groups[1].Value } else { "" }
@@ -172,8 +175,8 @@ function Parse-GameLog([string]$text, $state) {
       $species = [regex]::Replace($species, '\s*\([^)]*\)\s*$', '').Trim()      # drop trailing "(Class)"
       # Skip breeding births (tribe-credited Baby/Juvenile/Adolescent) and vehicles.
       $isBirth = $isTribe -and $species -match '^(Baby|Juvenile|Adolescent)\b'
-      if ($tamer -and -not $isBirth -and $species -notmatch '^(Wooden\s+)?(Raft|Motorboat)$') {
-        $result.tames += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); tamer=$tamer; species=$species; name=""; level=$level; ts=(Get-Date).ToString('o') }
+      if (($tamer -or $isTribe) -and -not $isBirth -and $species -notmatch '^(Wooden\s+)?(Raft|Motorboat)$') {
+        $result.tames += @{ id=[guid]::NewGuid().ToString('n').Substring(0,10); tamer=$tamer; tribe=$tribe; species=$species; name=""; level=$level; ts=(Get-Date).ToString('o') }
       }
       $matched = $true
     }
