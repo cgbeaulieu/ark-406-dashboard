@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785034477214,
+    "updated":  1785035077236,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -832,6 +832,14 @@
                       "species":  "Sabertooth",
                       "ts":  "2026-07-25T00:04:37.2320507-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "09cf57a694",
+                      "name":  "",
+                      "level":  "45",
+                      "species":  "Juvenile Kairuku",
+                      "ts":  "2026-07-25T21:04:37.2203259-06:00",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
