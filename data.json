@@ -1,13 +1,13 @@
 ﻿{
-    "updated":  1785029078536,
+    "updated":  1785029677218,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
                    "mode":  "PvE Co-op",
-                   "online":  false
+                   "online":  true
                },
     "online":  [
-
+                   "soopa5106"
                ],
     "deaths":  [
                    {
@@ -1147,6 +1147,15 @@
                          "species":  "Lightning Wyvern",
                          "ts":  "2026-07-21T19:44:37.1254617-06:00",
                          "killer":  "MikeHoncho - Lvl 83-787282541 (PowerBottomBoys)"
+                     },
+                     {
+                         "id":  "1bd4f2452b",
+                         "name":  "Juvenile Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "114",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-25T19:34:37.1973345-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
