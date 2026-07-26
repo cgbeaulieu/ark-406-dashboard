@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785081876909,
+    "updated":  1785082477452,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1056,6 +1056,15 @@
                       "species":  "Diplodocus",
                       "level":  "73",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "89678fa6cd",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T10:14:37.4374739-06:00",
+                      "species":  "Juvenile Argentavis",
+                      "level":  "20",
+                      "tamer":  "Mandalore"
                   }
               ],
     "memoriam":  [
@@ -1418,6 +1427,15 @@
                          "species":  "Pteranodon",
                          "ts":  "2026-07-25T23:44:37.9257481-06:00",
                          "killer":  "a Dilophosaur"
+                     },
+                     {
+                         "id":  "cc79e97734",
+                         "name":  "Juvenile Argy",
+                         "tribe":  "Tiggles",
+                         "level":  "20",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-26T10:14:37.4414735-06:00",
+                         "killer":  "a Sabertooth"
                      }
                  ],
     "events":  [
