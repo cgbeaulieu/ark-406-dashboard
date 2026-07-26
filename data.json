@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785093878066,
+    "updated":  1785094477427,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,8 +7,6 @@
                    "online":  true
                },
     "online":  [
-                   "Mandalore051",
-                   "xBabaloox",
                    "soopa5106"
                ],
     "deaths":  [
@@ -1102,6 +1100,24 @@
                       "species":  "Spino",
                       "level":  "186",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "846d267c81",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T13:34:37.4158171-06:00",
+                      "species":  "Baby Kairuku",
+                      "level":  "95",
+                      "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "c0400b8b83",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T13:34:37.4178187-06:00",
+                      "species":  "Adolescent Kairuku",
+                      "level":  "95",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
