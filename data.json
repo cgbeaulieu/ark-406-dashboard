@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785041677230,
+    "updated":  1785042277214,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1200,6 +1200,15 @@
                          "species":  "Pteranodon",
                          "ts":  "2026-07-25T20:44:37.2001697-06:00",
                          "killer":  "a Giganotosaurus"
+                     },
+                     {
+                         "id":  "d4ccada03b",
+                         "name":  "Pteranodon",
+                         "tribe":  "Tiggles",
+                         "level":  "245",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-25T23:04:37.1988706-06:00",
+                         "killer":  "a Therizinosaur"
                      }
                  ],
     "events":  [
