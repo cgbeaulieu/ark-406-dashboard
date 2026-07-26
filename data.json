@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785048877425,
+    "updated":  1785049477427,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -967,6 +967,15 @@
                       "species":  "Pulmonoscorpius",
                       "ts":  "2026-07-25T21:34:38.210280-06:00",
                       "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "9e4355e048",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T01:04:37.4107538-06:00",
+                      "species":  "Diplodocus",
+                      "level":  "73",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
