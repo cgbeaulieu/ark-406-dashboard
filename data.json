@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785045877464,
+    "updated":  1785046478087,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,6 @@
                    "online":  true
                },
     "online":  [
-                   "Mandalore051",
                    "xBabaloox",
                    "Prof. Merlyn",
                    "soopa5106"
@@ -865,6 +864,22 @@
                       "species":  "Megaloceros",
                       "ts":  "2026-07-25T23:24:37.2619591-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "b3aec0de01",
+                      "name":  "",
+                      "level":  "134",
+                      "species":  "Castoroides",
+                      "ts":  "2026-07-24T15:20:00.0000000-06:00",
+                      "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "a11c0de002",
+                      "name":  "",
+                      "level":  "127",
+                      "species":  "Ankylosaurus",
+                      "ts":  "2026-07-25T15:20:00.0000000-06:00",
+                      "tamer":  "Rowena"
                   }
               ],
     "memoriam":  [
