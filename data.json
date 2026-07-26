@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785094477427,
+    "updated":  1785095077377,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1118,6 +1118,15 @@
                       "species":  "Adolescent Kairuku",
                       "level":  "95",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "1f05a97638",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T13:44:37.3638603-06:00",
+                      "species":  "Procoptodon",
+                      "level":  "142",
+                      "tamer":  ""
                   }
               ],
     "memoriam":  [
