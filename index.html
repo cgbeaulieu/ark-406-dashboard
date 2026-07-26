@@ -268,7 +268,7 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
     el.innerHTML=living.length?living.slice().sort(byNewest).map(function(x){
       var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
       var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
-      var sub=esc(x.species)+(x.tamer?' &middot; jacked by <span class="by">'+esc(x.tamer)+'</span>':"");
+      var sub=esc(x.species)+(x.tamer?' &middot; jacked by <span class="by">'+esc(x.tamer)+'</span>':(x.tribe?' &middot; tamed by the <span class="by">'+esc(x.tribe)+'</span> tribe':' &middot; tribe tame'));
       return row("tame","&#129430;",'<h4>'+name+lvl+'</h4><div class="sub">'+sub+'</div>','<span class="tag green">TAMED</span><span class="when">'+fmt(x.ts)+'</span>');
     }).join(""):emptyState("&#129370;","Roster Empty","Every legend starts with one very angry cyber-Dodo.");
     // In Memoriam: every fallen beast — matched graves (with full history) + untraced fallen.
@@ -276,7 +276,7 @@ footer .em{color:var(--magenta); text-shadow:0 0 8px rgba(255,30,142,.6)}
       var m=ripFor[x.id];
       var name=x.name?'&ldquo;'+esc(x.name)+'&rdquo;':esc(x.species);
       var lvl=x.level?'<span class="lvl">LV '+esc(x.level)+'</span>':"";
-      var subd=esc(x.species)+(x.tamer?' &middot; tamed by <span class="by">'+esc(x.tamer)+'</span>':"");
+      var subd=esc(x.species)+(x.tamer?' &middot; tamed by <span class="by">'+esc(x.tamer)+'</span>':(x.tribe?' &middot; tamed by the <span class="by">'+esc(x.tribe)+'</span> tribe':' &middot; tribe tame'));
       var note='&#128367; tamed '+fmt(x.ts)+' &middot; fell '+fmt(m.ts)+(m.killer?' to <span class="by">'+esc(m.killer)+'</span>':"");
       return {ts:m.ts, html:row("tame grave","&#128128;",'<h4>'+name+lvl+'</h4><div class="sub">'+subd+'</div><div class="note" style="font-style:normal">'+note+'</div>','<span class="tag rip">&#9760; RIP</span><span class="when">'+fmt(m.ts)+'</span>')};
     });
