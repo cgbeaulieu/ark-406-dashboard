@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785089677441,
+    "updated":  1785090277479,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1074,6 +1074,15 @@
                       "species":  "Pulmonoscorpius",
                       "level":  "224",
                       "tamer":  "Mandalore"
+                  },
+                  {
+                      "id":  "38754d1a49",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T12:24:37.4662814-06:00",
+                      "species":  "Juvenile Raptor",
+                      "level":  "150",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
