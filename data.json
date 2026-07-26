@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785033277218,
+    "updated":  1785033877213,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1167,6 +1167,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-25T19:54:37.1773253-06:00",
                          "killer":  "a Sabertooth"
+                     },
+                     {
+                         "id":  "d2acf23470",
+                         "name":  "FRS",
+                         "tribe":  "Tiggles",
+                         "level":  "244",
+                         "species":  "Pteranodon",
+                         "ts":  "2026-07-25T20:44:37.2001697-06:00",
+                         "killer":  "a Giganotosaurus"
                      }
                  ],
     "events":  [
