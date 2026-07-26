@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785042877240,
+    "updated":  1785043477277,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -9,7 +9,8 @@
     "online":  [
                    "Mandalore051",
                    "xBabaloox",
-                   "Prof. Merlyn"
+                   "Prof. Merlyn",
+                   "soopa5106"
                ],
     "deaths":  [
                    {
@@ -856,6 +857,14 @@
                       "species":  "Juvenile Triceratops",
                       "ts":  "2026-07-25T21:34:37.2102804-06:00",
                       "tamer":  "Mandalore"
+                  },
+                  {
+                      "id":  "e49b350c25",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Megaloceros",
+                      "ts":  "2026-07-25T23:24:37.2619591-06:00",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
