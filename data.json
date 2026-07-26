@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785092677511,
+    "updated":  1785093277430,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1092,6 +1092,15 @@
                       "ts":  "2026-07-26T13:04:37.4979573-06:00",
                       "species":  "Juvenile Terror Bird",
                       "level":  "95",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "1e9e8ef4ba",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T13:14:37.4170879-06:00",
+                      "species":  "Spino",
+                      "level":  "186",
                       "tamer":  "Babaloo"
                   }
               ],
