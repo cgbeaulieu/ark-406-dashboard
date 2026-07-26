@@ -164,7 +164,7 @@ function Parse-GameLog([string]$text, $state) {
         $tamer = ""                                                                    # no individual credited
         $tribe = [regex]::Replace($tamerRaw, '^(Your\s+Tribe|Tribe)\s*', '').Trim()    # "Tribe Tiggles" -> "Tiggles"
       } else {
-        $tamer = [regex]::Replace($tamerRaw, '\s+of\s+Tribe\s+.*$', '').Trim()         # "Soop of Tribe Tiggles" -> "Soop"
+        $tamer = [regex]::Replace($tamerRaw, '\s+of\s+Tribe\b.*$', '').Trim()          # "Soop of Tribe Tiggles" -> "Soop" (also "X of Tribe" w/ blank name)
         $tamer = [regex]::Replace($tamer, '\s*-\s+Lvl.*$', '').Trim()
         $tm    = [regex]::Match($tamerRaw, '\s+of\s+Tribe\s+(.+)$')                     # capture their tribe if named
         $tribe = if ($tm.Success) { $tm.Groups[1].Value.Trim() } else { "" }
