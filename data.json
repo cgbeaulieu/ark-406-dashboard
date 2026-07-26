@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785046478087,
+    "updated":  1785047018843,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,8 +8,7 @@
                },
     "online":  [
                    "xBabaloox",
-                   "Prof. Merlyn",
-                   "soopa5106"
+                   "Prof. Merlyn"
                ],
     "deaths":  [
                    {
@@ -880,6 +879,94 @@
                       "species":  "Ankylosaurus",
                       "ts":  "2026-07-25T15:20:00.0000000-06:00",
                       "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "83e0117e33",
+                      "name":  "",
+                      "level":  "217",
+                      "species":  "Pteranodon",
+                      "ts":  "2026-07-10T16:21:53.542405-06:00",
+                      "tamer":  "PowerBottomBoys"
+                  },
+                  {
+                      "id":  "52f335c2ea",
+                      "name":  "",
+                      "level":  "209",
+                      "species":  "Argentavis",
+                      "ts":  "2026-07-11T06:54:25.762967-06:00",
+                      "tamer":  "PowerBottomBoys"
+                  },
+                  {
+                      "id":  "514b36c49d",
+                      "name":  "",
+                      "level":  "209",
+                      "species":  "Doedicurus",
+                      "ts":  "2026-07-11T16:34:37.789193-06:00",
+                      "tamer":  "PowerBottomBoys"
+                  },
+                  {
+                      "id":  "e66b76b688",
+                      "name":  "",
+                      "level":  "209",
+                      "species":  "Mammoth",
+                      "ts":  "2026-07-11T23:44:37.761403-06:00",
+                      "tamer":  "PowerBottomBoys"
+                  },
+                  {
+                      "id":  "a22dfa3873",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Ankylosaurus",
+                      "ts":  "2026-07-15T23:54:38.328023-06:00",
+                      "tamer":  "the tribe"
+                  },
+                  {
+                      "id":  "0d3f33639b",
+                      "name":  "",
+                      "level":  "202",
+                      "species":  "Doedicurus",
+                      "ts":  "2026-07-20T22:54:38.889056-06:00",
+                      "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "1c0e7e7d63",
+                      "name":  "",
+                      "level":  "224",
+                      "species":  "Megalodon",
+                      "ts":  "2026-07-24T15:20:01-06:00",
+                      "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "9d6ffcf1a5",
+                      "name":  "",
+                      "level":  "24",
+                      "species":  "Megalodon",
+                      "ts":  "2026-07-25T15:20:01-06:00",
+                      "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "3eaf53e8f1",
+                      "name":  "",
+                      "level":  "29",
+                      "species":  "Megalodon",
+                      "ts":  "2026-07-25T15:20:02-06:00",
+                      "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "6b3d4b68bf",
+                      "name":  "",
+                      "level":  "29",
+                      "species":  "Dunkleosteus",
+                      "ts":  "2026-07-25T15:20:03-06:00",
+                      "tamer":  "Tiggles"
+                  },
+                  {
+                      "id":  "e4ff1ae5fd",
+                      "name":  "",
+                      "level":  "142",
+                      "species":  "Pulmonoscorpius",
+                      "ts":  "2026-07-25T21:34:38.210280-06:00",
+                      "tamer":  "Tiggles"
                   }
               ],
     "memoriam":  [
