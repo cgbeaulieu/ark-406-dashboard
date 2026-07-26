@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785030277913,
+    "updated":  1785030877189,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1158,6 +1158,15 @@
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-25T19:34:37.1973345-06:00",
                          "killer":  ""
+                     },
+                     {
+                         "id":  "e8e7c353ca",
+                         "name":  "Argentavis",
+                         "tribe":  "Tiggles",
+                         "level":  "145",
+                         "species":  "Argentavis",
+                         "ts":  "2026-07-25T19:54:37.1773253-06:00",
+                         "killer":  "a Sabertooth"
                      }
                  ],
     "events":  [
