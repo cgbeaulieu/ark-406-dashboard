@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785075877394,
+    "updated":  1785076477435,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -333,7 +333,8 @@
                       "level":  "209",
                       "species":  "Lystrosaurus",
                       "ts":  "2026-07-10T10:56:26.0951784-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "480dbd71ad",
@@ -341,7 +342,8 @@
                       "level":  "20",
                       "species":  "Baby Lystrosaurus",
                       "ts":  "2026-07-10T10:56:26.0951784-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "2fc2bd6c9f",
@@ -349,7 +351,8 @@
                       "level":  "89",
                       "species":  "Dodo",
                       "ts":  "2026-07-10T10:56:26.0961787-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "122fa90d6b",
@@ -357,7 +360,8 @@
                       "level":  "84",
                       "species":  "Pteranodon",
                       "ts":  "2026-07-10T10:56:26.0971793-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "4c51367e89",
@@ -365,7 +369,8 @@
                       "level":  "125",
                       "species":  "Parasaur",
                       "ts":  "2026-07-10T10:56:26.0971793-06:00",
-                      "tamer":  "WesleyPipes"
+                      "tamer":  "WesleyPipes",
+                      "tribe":  ""
                   },
                   {
                       "id":  "87d344e861",
@@ -373,7 +378,8 @@
                       "level":  "25",
                       "species":  "Baby Argentavis",
                       "ts":  "2026-07-10T16:21:52.5414062-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "119f815b65",
@@ -381,7 +387,8 @@
                       "level":  "194",
                       "species":  "Argentavis",
                       "ts":  "2026-07-10T21:15:42.4916283-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "481c02ad68",
@@ -389,7 +396,8 @@
                       "level":  "130",
                       "species":  "Juvenile Argentavis",
                       "ts":  "2026-07-10T21:15:42.4942099-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "a35673acf9",
@@ -397,7 +405,8 @@
                       "level":  "145",
                       "species":  "Juvenile Triceratops",
                       "ts":  "2026-07-10T21:15:42.4942099-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "6700a528c0",
@@ -405,7 +414,8 @@
                       "level":  "37",
                       "species":  "Pegomastax",
                       "ts":  "2026-07-10T21:15:42.4982079-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "5b6838adca",
@@ -413,7 +423,8 @@
                       "level":  "209",
                       "species":  "Therizinosaur",
                       "ts":  "2026-07-11T06:54:24.7709644-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "c14f25defe",
@@ -421,7 +432,8 @@
                       "level":  "22",
                       "species":  "Pegomastax",
                       "ts":  "2026-07-11T14:14:36.7656231-06:00",
-                      "tamer":  "Onyx of Tribe"
+                      "tamer":  "Onyx of Tribe",
+                      "tribe":  ""
                   },
                   {
                       "id":  "15cabfd003",
@@ -429,7 +441,8 @@
                       "level":  "29",
                       "species":  "Vulture",
                       "ts":  "2026-07-11T16:24:36.8176221-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "a3e7c216a3",
@@ -437,7 +450,8 @@
                       "level":  "194",
                       "species":  "Rex",
                       "ts":  "2026-07-11T16:34:36.7891931-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e4c3033a35",
@@ -445,7 +459,8 @@
                       "level":  "89",
                       "species":  "Doedicurus",
                       "ts":  "2026-07-11T17:54:36.7078854-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "f1eeb7103d",
@@ -453,7 +468,8 @@
                       "level":  "22",
                       "species":  "Stegosaurus",
                       "ts":  "2026-07-11T21:14:36.6944048-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "a051a9f853",
@@ -461,7 +477,8 @@
                       "level":  "67",
                       "species":  "Pteranodon",
                       "ts":  "2026-07-11T21:44:36.7374668-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "3bac113d5a",
@@ -469,7 +486,8 @@
                       "level":  "142",
                       "species":  "Griffin",
                       "ts":  "2026-07-11T22:54:36.7824698-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "252b7d3125",
@@ -477,7 +495,8 @@
                       "level":  "37",
                       "species":  "Dodo",
                       "ts":  "2026-07-11T23:24:36.8039217-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e6b175de71",
@@ -485,7 +504,8 @@
                       "level":  "202",
                       "species":  "Pteranodon",
                       "ts":  "2026-07-11T23:24:36.8069217-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "1035e42306",
@@ -493,7 +513,8 @@
                       "level":  "29",
                       "species":  "Dodo",
                       "ts":  "2026-07-11T23:24:36.8069217-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "afbe5de977",
@@ -501,7 +522,8 @@
                       "level":  "194",
                       "species":  "Dodo",
                       "ts":  "2026-07-11T23:44:36.7614032-06:00",
-                      "tamer":  "Onyx"
+                      "tamer":  "Onyx",
+                      "tribe":  ""
                   },
                   {
                       "id":  "068f0345a3",
@@ -509,7 +531,8 @@
                       "level":  "217",
                       "species":  "Dire Bear",
                       "ts":  "2026-07-12T01:34:36.7235531-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "5c5035c8d6",
@@ -517,7 +540,8 @@
                       "level":  "209",
                       "species":  "Dire Bear",
                       "ts":  "2026-07-12T01:54:36.7207681-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "0eb4189484",
@@ -525,7 +549,8 @@
                       "level":  "140",
                       "species":  "Baby Lystrosaurus",
                       "ts":  "2026-07-12T10:14:37.0171185-06:00",
-                      "tamer":  "Mandalore"
+                      "tamer":  "Mandalore",
+                      "tribe":  ""
                   },
                   {
                       "id":  "9a37a10569",
@@ -533,7 +558,8 @@
                       "level":  "100",
                       "species":  "Juvenile Hyaenodon",
                       "ts":  "2026-07-12T12:44:37.0129587-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e764e99046",
@@ -541,7 +567,8 @@
                       "level":  "29",
                       "species":  "Argentavis",
                       "ts":  "2026-07-12T12:44:37.0169585-06:00",
-                      "tamer":  "Mandalore"
+                      "tamer":  "Mandalore",
+                      "tribe":  ""
                   },
                   {
                       "id":  "6b65e65813",
@@ -549,7 +576,8 @@
                       "level":  "22",
                       "species":  "Argentavis",
                       "ts":  "2026-07-12T12:54:37.0410418-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "4a9f8a7982",
@@ -557,7 +585,8 @@
                       "level":  "224",
                       "species":  "Argentavis",
                       "ts":  "2026-07-12T18:44:37.0365757-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "4351f01bf6",
@@ -565,7 +594,8 @@
                       "level":  "145",
                       "species":  "Juvenile Argentavis",
                       "ts":  "2026-07-12T19:54:37.1238721-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "b99ef13da6",
@@ -573,7 +603,8 @@
                       "level":  "90",
                       "species":  "Baby Argentavis",
                       "ts":  "2026-07-12T22:44:37.9470486-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "2413a68b81",
@@ -581,7 +612,8 @@
                       "level":  "150",
                       "species":  "Baby Allosaurus",
                       "ts":  "2026-07-12T22:44:37.9629236-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "948a0823fe",
@@ -589,7 +621,8 @@
                       "level":  "217",
                       "species":  "Rex",
                       "ts":  "2026-07-12T23:04:37.0404256-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "71699de5e7",
@@ -597,7 +630,8 @@
                       "level":  "202",
                       "species":  "Megaloceros",
                       "ts":  "2026-07-12T23:34:37.0994745-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "be3dee7170",
@@ -605,7 +639,8 @@
                       "level":  "74",
                       "species":  "Dung Beetle",
                       "ts":  "2026-07-13T01:14:37.0301009-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "6100bdca90",
@@ -613,7 +648,8 @@
                       "level":  "74",
                       "species":  "Giganotosaurus",
                       "ts":  "2026-07-13T19:14:37.1519776-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "2733a665ce",
@@ -621,7 +657,8 @@
                       "level":  "142",
                       "species":  "Dilophosaur",
                       "ts":  "2026-07-13T23:14:37.0986428-06:00",
-                      "tamer":  "Mandalore"
+                      "tamer":  "Mandalore",
+                      "tribe":  ""
                   },
                   {
                       "id":  "be483fd707",
@@ -629,7 +666,8 @@
                       "level":  "74",
                       "species":  "Argentavis",
                       "ts":  "2026-07-14T00:34:37.0671368-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "d7d0f4452e",
@@ -637,7 +675,8 @@
                       "level":  "216",
                       "species":  "Gigantopithecus",
                       "ts":  "2026-07-14T21:04:37.1846766-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e65c69e0c7",
@@ -645,7 +684,8 @@
                       "level":  "196",
                       "species":  "Brontosaurus",
                       "ts":  "2026-07-14T23:44:38.1168076-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "2dd9ee7c78",
@@ -653,7 +693,8 @@
                       "level":  "90",
                       "species":  "Juvenile Mammoth",
                       "ts":  "2026-07-15T22:54:37.3298364-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "1f2793d7a4",
@@ -661,7 +702,8 @@
                       "level":  "22",
                       "species":  "Raptor",
                       "ts":  "2026-07-15T23:54:37.3250234-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "95291402cf",
@@ -669,7 +711,8 @@
                       "level":  "67",
                       "species":  "Raptor",
                       "ts":  "2026-07-15T23:54:37.3280238-06:00",
-                      "tamer":  "Onyx"
+                      "tamer":  "Onyx",
+                      "tribe":  ""
                   },
                   {
                       "id":  "da25b98ace",
@@ -677,7 +720,8 @@
                       "level":  "60",
                       "species":  "Juvenile Mammoth",
                       "ts":  "2026-07-18T00:24:37.1365134-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "b2e40fa504",
@@ -685,7 +729,8 @@
                       "level":  "50",
                       "species":  "Juvenile Unicorn",
                       "ts":  "2026-07-18T16:34:37.1060640-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "365c9fc22a",
@@ -693,7 +738,8 @@
                       "level":  "202",
                       "species":  "Mantis",
                       "ts":  "2026-07-19T11:54:37.1567299-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "bf7b76371c",
@@ -701,7 +747,8 @@
                       "level":  "224",
                       "species":  "Mantis",
                       "ts":  "2026-07-20T01:14:37.1710733-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e336c892ed",
@@ -709,7 +756,8 @@
                       "level":  "202",
                       "species":  "Jerboa",
                       "ts":  "2026-07-20T01:24:37.2243525-06:00",
-                      "tamer":  "MikeHoncho"
+                      "tamer":  "MikeHoncho",
+                      "tribe":  ""
                   },
                   {
                       "id":  "3fa7575b26",
@@ -717,7 +765,8 @@
                       "level":  "20",
                       "species":  "Juvenile Carnotaurus",
                       "ts":  "2026-07-20T22:54:37.8840567-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "63a1079ac4",
@@ -725,7 +774,8 @@
                       "level":  "85",
                       "species":  "Juvenile Direwolf",
                       "ts":  "2026-07-20T22:54:37.8900566-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e14dabd902",
@@ -733,7 +783,8 @@
                       "level":  "188",
                       "species":  "Yutyrannus",
                       "ts":  "2026-07-20T23:04:37.1108986-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "a2865f350f",
@@ -741,7 +792,8 @@
                       "level":  "60",
                       "species":  "Juvenile Brontosaurus",
                       "ts":  "2026-07-20T23:24:37.1026029-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "8c278a34a8",
@@ -749,7 +801,8 @@
                       "level":  "202",
                       "species":  "Argentavis",
                       "ts":  "2026-07-20T23:24:37.1046063-06:00",
-                      "tamer":  "Onyx"
+                      "tamer":  "Onyx",
+                      "tribe":  ""
                   },
                   {
                       "id":  "788edd0383",
@@ -757,7 +810,8 @@
                       "level":  "217",
                       "species":  "Dung Beetle",
                       "ts":  "2026-07-20T23:44:37.0608393-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "f7373fb030",
@@ -765,7 +819,8 @@
                       "level":  "74",
                       "species":  "Dilophosaur",
                       "ts":  "2026-07-20T23:54:37.1346457-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "b8ae87a9c7",
@@ -773,7 +828,8 @@
                       "level":  "188",
                       "species":  "Dilophosaur",
                       "ts":  "2026-07-20T23:54:37.1376456-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "360a2b6606",
@@ -781,7 +837,8 @@
                       "level":  "50",
                       "species":  "Baby Carbonemys",
                       "ts":  "2026-07-21T00:04:37.1722279-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "1c75d1a6c6",
@@ -789,7 +846,8 @@
                       "level":  "85",
                       "species":  "Juvenile Stegosaurus",
                       "ts":  "2026-07-21T00:04:37.1762279-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "0041182a9f",
@@ -797,7 +855,8 @@
                       "level":  "22",
                       "species":  "Juvenile Pteranodon",
                       "ts":  "2026-07-21T00:34:37.1205740-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "6f5b016215",
@@ -805,7 +864,8 @@
                       "level":  "55",
                       "species":  "Baby Triceratops",
                       "ts":  "2026-07-21T21:54:37.1471517-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "27a9ef71f2",
@@ -813,7 +873,8 @@
                       "level":  "20",
                       "species":  "Juvenile Parasaur",
                       "ts":  "2026-07-21T21:54:37.1514647-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "545666d836",
@@ -821,7 +882,8 @@
                       "level":  "90",
                       "species":  "Juvenile Stegosaurus",
                       "ts":  "2026-07-21T23:14:37.1527102-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "33926b0d1e",
@@ -829,7 +891,8 @@
                       "level":  "194",
                       "species":  "Sabertooth",
                       "ts":  "2026-07-25T00:04:37.2320507-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "09cf57a694",
@@ -837,7 +900,8 @@
                       "level":  "45",
                       "species":  "Juvenile Kairuku",
                       "ts":  "2026-07-25T21:04:37.2203259-06:00",
-                      "tamer":  "Soop"
+                      "tamer":  "Soop",
+                      "tribe":  ""
                   },
                   {
                       "id":  "baaaf76db6",
@@ -845,7 +909,8 @@
                       "level":  "89",
                       "species":  "Terror Bird",
                       "ts":  "2026-07-25T21:24:37.2036193-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "5504523f03",
@@ -853,7 +918,8 @@
                       "level":  "140",
                       "species":  "Juvenile Triceratops",
                       "ts":  "2026-07-25T21:34:37.2102804-06:00",
-                      "tamer":  "Mandalore"
+                      "tamer":  "Mandalore",
+                      "tribe":  ""
                   },
                   {
                       "id":  "e49b350c25",
@@ -861,7 +927,8 @@
                       "level":  "202",
                       "species":  "Megaloceros",
                       "ts":  "2026-07-25T23:24:37.2619591-06:00",
-                      "tamer":  "Babaloo"
+                      "tamer":  "Babaloo",
+                      "tribe":  ""
                   },
                   {
                       "id":  "b3aec0de01",
@@ -869,7 +936,8 @@
                       "level":  "134",
                       "species":  "Castoroides",
                       "ts":  "2026-07-24T15:20:00.0000000-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "a11c0de002",
@@ -877,7 +945,8 @@
                       "level":  "127",
                       "species":  "Ankylosaurus",
                       "ts":  "2026-07-25T15:20:00.0000000-06:00",
-                      "tamer":  "Rowena"
+                      "tamer":  "Rowena",
+                      "tribe":  ""
                   },
                   {
                       "id":  "83e0117e33",
@@ -885,7 +954,8 @@
                       "level":  "217",
                       "species":  "Pteranodon",
                       "ts":  "2026-07-10T16:21:53.542405-06:00",
-                      "tamer":  "PowerBottomBoys"
+                      "tamer":  "",
+                      "tribe":  "PowerBottomBoys"
                   },
                   {
                       "id":  "52f335c2ea",
@@ -893,7 +963,8 @@
                       "level":  "209",
                       "species":  "Argentavis",
                       "ts":  "2026-07-11T06:54:25.762967-06:00",
-                      "tamer":  "PowerBottomBoys"
+                      "tamer":  "",
+                      "tribe":  "PowerBottomBoys"
                   },
                   {
                       "id":  "514b36c49d",
@@ -901,7 +972,8 @@
                       "level":  "209",
                       "species":  "Doedicurus",
                       "ts":  "2026-07-11T16:34:37.789193-06:00",
-                      "tamer":  "PowerBottomBoys"
+                      "tamer":  "",
+                      "tribe":  "PowerBottomBoys"
                   },
                   {
                       "id":  "e66b76b688",
@@ -909,7 +981,8 @@
                       "level":  "209",
                       "species":  "Mammoth",
                       "ts":  "2026-07-11T23:44:37.761403-06:00",
-                      "tamer":  "PowerBottomBoys"
+                      "tamer":  "",
+                      "tribe":  "PowerBottomBoys"
                   },
                   {
                       "id":  "a22dfa3873",
@@ -917,7 +990,8 @@
                       "level":  "202",
                       "species":  "Ankylosaurus",
                       "ts":  "2026-07-15T23:54:38.328023-06:00",
-                      "tamer":  "the tribe"
+                      "tamer":  "",
+                      "tribe":  ""
                   },
                   {
                       "id":  "0d3f33639b",
@@ -925,7 +999,8 @@
                       "level":  "202",
                       "species":  "Doedicurus",
                       "ts":  "2026-07-20T22:54:38.889056-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "1c0e7e7d63",
@@ -933,7 +1008,8 @@
                       "level":  "224",
                       "species":  "Megalodon",
                       "ts":  "2026-07-24T15:20:01-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "9d6ffcf1a5",
@@ -941,7 +1017,8 @@
                       "level":  "24",
                       "species":  "Megalodon",
                       "ts":  "2026-07-25T15:20:01-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "3eaf53e8f1",
@@ -949,7 +1026,8 @@
                       "level":  "29",
                       "species":  "Megalodon",
                       "ts":  "2026-07-25T15:20:02-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "6b3d4b68bf",
@@ -957,7 +1035,8 @@
                       "level":  "29",
                       "species":  "Dunkleosteus",
                       "ts":  "2026-07-25T15:20:03-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "e4ff1ae5fd",
@@ -965,7 +1044,8 @@
                       "level":  "142",
                       "species":  "Pulmonoscorpius",
                       "ts":  "2026-07-25T21:34:38.210280-06:00",
-                      "tamer":  "Tiggles"
+                      "tamer":  "",
+                      "tribe":  "Tiggles"
                   },
                   {
                       "id":  "9e4355e048",
