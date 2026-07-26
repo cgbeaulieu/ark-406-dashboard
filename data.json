@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785036277216,
+    "updated":  1785036877226,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -848,6 +848,14 @@
                       "species":  "Terror Bird",
                       "ts":  "2026-07-25T21:24:37.2036193-06:00",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "5504523f03",
+                      "name":  "",
+                      "level":  "140",
+                      "species":  "Juvenile Triceratops",
+                      "ts":  "2026-07-25T21:34:37.2102804-06:00",
+                      "tamer":  "Mandalore"
                   }
               ],
     "memoriam":  [
