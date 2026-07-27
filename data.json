@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785110677443,
+    "updated":  1785111277506,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1138,6 +1138,24 @@
                       "species":  "Basilosaurus",
                       "level":  "74",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "cc353da0e2",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T18:14:37.4857891-06:00",
+                      "species":  "Jerboa",
+                      "level":  "29",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "df31a59586",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T18:14:37.5015600-06:00",
+                      "species":  "Jerboa",
+                      "level":  "100",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
