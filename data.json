@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785110077519,
+    "updated":  1785110677443,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1129,6 +1129,15 @@
                       "species":  "Procoptodon",
                       "level":  "142",
                       "tamer":  ""
+                  },
+                  {
+                      "id":  "c61c93a24f",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-26T18:04:37.4360256-06:00",
+                      "species":  "Basilosaurus",
+                      "level":  "74",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
