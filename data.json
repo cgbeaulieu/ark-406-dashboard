@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785302677459,
+    "updated":  1785303277481,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,6 @@
                    "online":  true
                },
     "online":  [
-                   "Nailedit",
                    "soopa5106",
                    "Prof. Merlyn"
                ],
@@ -1170,6 +1169,15 @@
                       "species":  "Jerboa",
                       "level":  "100",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "7f772d0254",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-07-28T23:34:37.4689662-06:00",
+                      "species":  "Ankylosaurus",
+                      "level":  "194",
+                      "tamer":  ""
                   }
               ],
     "memoriam":  [
