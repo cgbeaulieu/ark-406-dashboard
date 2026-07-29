@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785300277478,
+    "updated":  1785300877477,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,7 +8,8 @@
                },
     "online":  [
                    "Nailedit",
-                   "soopa5106"
+                   "soopa5106",
+                   "Prof. Merlyn"
                ],
     "deaths":  [
                    {
@@ -1576,6 +1577,15 @@
                          "species":  "Argentavis",
                          "ts":  "2026-07-26T10:24:37.3814512-06:00",
                          "killer":  "a Megatherium"
+                     },
+                     {
+                         "id":  "01585368fc",
+                         "name":  "Juvenile Lystrosaurus",
+                         "tribe":  "",
+                         "level":  "78",
+                         "species":  "Lystrosaurus",
+                         "ts":  "2026-07-28T22:54:37.4543800-06:00",
+                         "killer":  ""
                      }
                  ],
     "events":  [
