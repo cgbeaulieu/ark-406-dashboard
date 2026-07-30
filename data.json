@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785384877265,
+    "updated":  1785385477294,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1593,6 +1593,15 @@
                          "species":  "Lystrosaurus",
                          "ts":  "2026-07-28T22:54:37.4543800-06:00",
                          "killer":  ""
+                     },
+                     {
+                         "id":  "7c251d5b4e",
+                         "name":  "Backpack",
+                         "tribe":  "Tiggles",
+                         "level":  "105",
+                         "species":  "Jerboa",
+                         "ts":  "2026-07-29T22:24:37.2802763-06:00",
+                         "killer":  "a Terror Bird"
                      }
                  ],
     "events":  [
