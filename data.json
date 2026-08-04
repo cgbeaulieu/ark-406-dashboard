@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785819277386,
+    "updated":  1785819877466,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -342,6 +342,13 @@
                        "who":  "Soop",
                        "id":  "04cd56e03a",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "a Mantis",
+                       "ts":  "2026-08-03T23:04:37.4509036-06:00",
+                       "who":  "Roger",
+                       "id":  "cef29be393",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
