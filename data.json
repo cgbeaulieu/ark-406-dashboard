@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785822278076,
+    "updated":  1785822877390,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1203,6 +1203,15 @@
                       "species":  "Jerboa",
                       "level":  "29",
                       "tamer":  "Rowena"
+                  },
+                  {
+                      "id":  "25d4e2c1d9",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-03T23:54:37.3849461-06:00",
+                      "species":  "Allosaurus",
+                      "level":  "134",
+                      "tamer":  ""
                   }
               ],
     "memoriam":  [
