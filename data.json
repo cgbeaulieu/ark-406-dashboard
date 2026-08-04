@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785820477392,
+    "updated":  1785821077396,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -7,7 +7,6 @@
                    "online":  true
                },
     "online":  [
-                   "Nailedit",
                    "xBabaloox",
                    "Prof. Merlyn",
                    "soopa5106",
@@ -349,6 +348,13 @@
                        "who":  "Roger",
                        "id":  "cef29be393",
                        "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "",
+                       "ts":  "2026-08-03T23:24:37.3801944-06:00",
+                       "who":  "Onyx",
+                       "id":  "203bbb2fea",
+                       "cause":  "Died mysteriously"
                    }
                ],
     "tames":  [
@@ -1622,6 +1628,15 @@
                          "species":  "Jerboa",
                          "ts":  "2026-07-29T22:24:37.2802763-06:00",
                          "killer":  "a Terror Bird"
+                     },
+                     {
+                         "id":  "b2e00aaeb3",
+                         "name":  "Papaya",
+                         "tribe":  "Tiggles",
+                         "level":  "206",
+                         "species":  "Fire Wyvern",
+                         "ts":  "2026-08-03T23:24:37.3961721-06:00",
+                         "killer":  "a Lightning Wyvern"
                      }
                  ],
     "events":  [
