@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785996277428,
+    "updated":  1785996877444,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1235,6 +1235,15 @@
                       "species":  "Juvenile Dire Bear",
                       "level":  "50",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "fab286ff0a",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-06T00:14:37.4307350-06:00",
+                      "species":  "Dimorphodon",
+                      "level":  "37",
+                      "tamer":  "Roger"
                   }
               ],
     "memoriam":  [
