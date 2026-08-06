@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785991477417,
+    "updated":  1785992077393,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -360,6 +360,13 @@
                        "ts":  "2026-08-05T22:44:37.4037167-06:00",
                        "who":  "Roger",
                        "id":  "21a241ad5f",
+                       "cause":  "Slain in the wild"
+                   },
+                   {
+                       "killer":  "a Purlovia",
+                       "ts":  "2026-08-05T22:54:37.3800336-06:00",
+                       "who":  "Roger",
+                       "id":  "31739e6cd1",
                        "cause":  "Slain in the wild"
                    }
                ],
