@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1785990877354,
+    "updated":  1785991477417,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -354,6 +354,13 @@
                        "who":  "Onyx",
                        "id":  "203bbb2fea",
                        "cause":  "Died mysteriously"
+                   },
+                   {
+                       "killer":  "Charmander - Lvl 232 (Fire Wyvern) (Tiggles)",
+                       "ts":  "2026-08-05T22:44:37.4037167-06:00",
+                       "who":  "Roger",
+                       "id":  "21a241ad5f",
+                       "cause":  "Slain in the wild"
                    }
                ],
     "tames":  [
