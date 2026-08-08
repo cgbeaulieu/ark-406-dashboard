@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1786163077475,
+    "updated":  1786163677440,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1243,6 +1243,33 @@
                       "species":  "Dimorphodon",
                       "level":  "37",
                       "tamer":  "Roger"
+                  },
+                  {
+                      "id":  "ff97f321e5",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-07T22:34:37.4409911-06:00",
+                      "species":  "Juvenile Dire Bear",
+                      "level":  "90",
+                      "tamer":  "Onyx"
+                  },
+                  {
+                      "id":  "7aaf42f34c",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-07T22:34:37.4409911-06:00",
+                      "species":  "Archaeopteryx",
+                      "level":  "67",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "900cf06654",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-07T22:34:37.4409911-06:00",
+                      "species":  "Juvenile Dire Bear",
+                      "level":  "92",
+                      "tamer":  "Onyx"
                   }
               ],
     "memoriam":  [
