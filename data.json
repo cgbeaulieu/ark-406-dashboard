@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1786166077481,
+    "updated":  1786166677455,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -1287,6 +1287,15 @@
                       "ts":  "2026-08-07T22:54:37.4722321-06:00",
                       "species":  "Juvenile Direwolf",
                       "level":  "25",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "6d6ab1880a",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-07T23:24:37.4423239-06:00",
+                      "species":  "Lymantria",
+                      "level":  "21",
                       "tamer":  "Babaloo"
                   }
               ],
