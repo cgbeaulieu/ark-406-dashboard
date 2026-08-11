@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1786425278199,
+    "updated":  1786425877435,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -8,8 +8,8 @@
                },
     "online":  [
                    "Prof. Merlyn",
-                   "Nailedit",
-                   "xBabaloox"
+                   "xBabaloox",
+                   "soopa5106"
                ],
     "deaths":  [
                    {
@@ -1313,6 +1313,24 @@
                       "species":  "Juvenile Triceratops",
                       "level":  "55",
                       "tamer":  "Soop"
+                  },
+                  {
+                      "id":  "fd633fc9b4",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-10T23:24:37.4166611-06:00",
+                      "species":  "Juvenile Gigantopithecus",
+                      "level":  "150",
+                      "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "f3b60c3877",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-10T23:24:37.4196084-06:00",
+                      "species":  "Pelagornis",
+                      "level":  "22",
+                      "tamer":  "Babaloo"
                   }
               ],
     "memoriam":  [
