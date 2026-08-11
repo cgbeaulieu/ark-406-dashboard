@@ -1,5 +1,5 @@
 ﻿{
-    "updated":  1786422277345,
+    "updated":  1786422877360,
     "server":  {
                    "name":  "406 Server",
                    "map":  "Ragnarok",
@@ -9,7 +9,8 @@
     "online":  [
                    "Prof. Merlyn",
                    "soopa5106",
-                   "Nailedit"
+                   "Nailedit",
+                   "xBabaloox"
                ],
     "deaths":  [
                    {
@@ -1297,6 +1298,15 @@
                       "species":  "Lymantria",
                       "level":  "21",
                       "tamer":  "Babaloo"
+                  },
+                  {
+                      "id":  "b23539598c",
+                      "name":  "",
+                      "tribe":  "Tiggles",
+                      "ts":  "2026-08-10T22:34:37.3443159-06:00",
+                      "species":  "Juvenile Triceratops",
+                      "level":  "55",
+                      "tamer":  "Soop"
                   }
               ],
     "memoriam":  [
